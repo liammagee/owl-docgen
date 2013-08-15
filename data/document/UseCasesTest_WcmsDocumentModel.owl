@@ -1,0 +1,281 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY document "file:/Users/liam/Dropbox/Work/abc/2013&#37;20ABC&#37;20Domain&#37;20Modelling/code/data/document/" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#"
+     xml:base="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:document="file:/Users/liam/Dropbox/Work/abc/2013%20ABC%20Domain%20Modelling/code/data/document/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17">
+        <owl:imports rdf:resource="&document;WcmsDocumentModelRefactored.rdf"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#AS1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#AS1">
+        <rdfs:label>AS1: CMS article for Body Sphere episode PE1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#AS2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#AS2">
+        <rdfs:label>AS2: CMS article for Life Matters segment on life after redundancy from PE2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#AS3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#AS3">
+        <rdfs:label>AS3: CMS article for Life Matters segment on faith and doubt from PE2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#BI1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#BI1">
+        <rdfs:label>BI1: Sunday Extra (PE3) on Radio National at 07:30, 2/9/12</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#BI2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#BI2">
+        <rdfs:label>BI2: Background Briefing (PE4) on Radio National at 08:00, 2/9/12 (part of BI1)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#BI3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#BI3">
+        <rdfs:label>BI3: Background Briefing (PE4) on Radio Australia at 14:00, 3/9/12</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#N1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#N1">
+        <rdfs:label>N1: Radio National</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#N2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#N2">
+        <rdfs:label>N2: New England North West</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#N3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#N3">
+        <rdfs:label>N3: Digital Extra</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#P1:_Life_Matters -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#P1:_Life_Matters">
+        <rdf:type rdf:resource="http://abc.net.au/ontologies/2013/WcmsDocumentModel#ABCProgram"/>
+        <rdfs:label>P1: Life Matters</rdfs:label>
+        <document:items rdf:resource="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PE2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#P2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#P2">
+        <rdf:type rdf:resource="http://abc.net.au/ontologies/2013/WcmsDocumentModel#ABCProgram"/>
+        <rdfs:label>P2: Sunday Extra</rdfs:label>
+        <document:items rdf:resource="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PE3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#P3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#P3">
+        <rdf:type rdf:resource="http://abc.net.au/ontologies/2013/WcmsDocumentModel#ABCProgram"/>
+        <rdfs:label>P3: Sydney Writers Festival </rdfs:label>
+        <document:items rdf:resource="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#P4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#P4">
+        <rdf:type rdf:resource="http://abc.net.au/ontologies/2013/WcmsDocumentModel#ABCProgram"/>
+        <rdfs:label>P4: Background Briefing</rdfs:label>
+        <document:items rdf:resource="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PE4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PE1">
+        <rdf:type rdf:resource="&document;WcmsDocumentModelRefactored.rdf#ABCEpisode"/>
+        <rdfs:label>PE1: Body Sphere on Tango Nuevo</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PE2">
+        <rdf:type rdf:resource="&document;WcmsDocumentModelRefactored.rdf#ABCEpisode"/>
+        <rdfs:label>PE2: Life Matters produced on Monday 3/9/12</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PE3">
+        <rdf:type rdf:resource="&document;WcmsDocumentModelRefactored.rdf#ABCEpisode"/>
+        <rdfs:label>PE3: Sunday Extra produced for 2/9/12</rdfs:label>
+        <document:segments rdf:resource="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PES1"/>
+        <document:segments rdf:resource="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PES2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PE4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PE4">
+        <rdf:type rdf:resource="&document;WcmsDocumentModelRefactored.rdf#ABCEpisode"/>
+        <rdfs:label>PE4: Background Briefing on rape in Democratic Republic of Congo</rdfs:label>
+        <document:segments rdf:resource="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PES3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PES1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PES1">
+        <rdf:type rdf:resource="http://abc.net.au/ontologies/2013/WcmsDocumentModel#ABCAudioSegment"/>
+        <rdfs:label>PES1: Sunday Extra produced for 2/9/12: Whole Episode</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PES2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PES2">
+        <rdf:type rdf:resource="http://abc.net.au/ontologies/2013/WcmsDocumentModel#ABCAudioSegment"/>
+        <rdfs:label>PES2: Sunday Extra produced for 2/9/12: Background Briefing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PES3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#PES3">
+        <rdf:type rdf:resource="http://abc.net.au/ontologies/2013/WcmsDocumentModel#ABCAudioSegment"/>
+        <rdfs:label>PES3: Background Briefing on rape in Democratic Republic of Congo: Whole Episode</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#S1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#S1">
+        <rdfs:label>S1: Radio National, WA</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#S2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#S2">
+        <rdfs:label>S2: Radio National, NSW/VIC/TAS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#SE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#SE">
+        <rdfs:label>SE: Digital Extra</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#SE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#SE1">
+        <rdfs:label>SE1: RN Drive, Mondays 16:00-18:00, all platforms, Radio National WA (S1)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#SE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#SE2">
+        <rdfs:label>SE2: RN Drive, Mondays 18:00-20:00, all platforms, Radio National NSW/VIC/TAS (S2)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#SE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#SE3">
+        <rdfs:label>SE3: RN Drive, Tuesdays 18:00-20:00, all platforms, Radio National NSW/VIC/TAS (S2)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#SE4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#SE4">
+        <rdfs:label>SE4: Sunday Extra, Sundays 7:30-10:00, all platforms, Radio National NSW/VIC/TAS (S2)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#SE5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17#SE5">
+        <rdfs:label>SE5: Background Briefing, Tuesdays 14:00-14:45, all platforms, Radio National NSW/VIC/TAS (S2)</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,3153 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY schema "http://schema.org/" >
+    <!ENTITY odrl "http://w3.org/ns/odrl/2#" >
+    <!ENTITY vocab.sindice.net "http://vocab.sindice.net/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY vs "http://www.w3.org/2003/06/sw-vocab-status/ns#" >
+    <!ENTITY ebuccdm "http://www.ebu.ch/metadata/ontologies/ebuccdm#" >
+    <!ENTITY wcms "http://abc.net.au/ontologies/2013/WcmsDomainModel#" >
+    <!ENTITY abc "http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://abc.net.au/ontologies/2013/WcmsDomainModel#"
+     xmlns:abc="http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:ebuccdm="http://www.ebu.ch/metadata/ontologies/ebuccdm#"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:vocab.sindice.net="http://vocab.sindice.net/"
+     xmlns:schema="http://schema.org/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wcms="http://abc.net.au/ontologies/2013/WcmsDomainModel#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:odrl="http://w3.org/ns/odrl/2#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo rdf:datatype="&xsd;string">Created with TopBraid Composer</owl:versionInfo>
+        <owl:imports rdf:resource="FOAF.rdf"/>
+        <owl:imports rdf:resource="odrl.rdf"/>
+        <owl:imports rdf:resource="ABCProgramsReferenceModel.owl"/>
+        <owl:imports rdf:resource="CCDM.owl"/>
+        <owl:imports rdf:resource="skos.rdf"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#accountablePerson -->
+
+    <owl:ObjectProperty rdf:about="&wcms;accountablePerson">
+        <rdfs:domain rdf:resource="&schema;Article"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#alertArea -->
+
+    <owl:ObjectProperty rdf:about="&wcms;alertArea">
+        <rdfs:domain rdf:resource="&wcms;Alert"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;GeoCoordinates"/>
+                    <rdf:Description rdf:about="&schema;Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#alertCategory -->
+
+    <owl:ObjectProperty rdf:about="&wcms;alertCategory">
+        <rdfs:domain rdf:resource="&wcms;Alert"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#alertCertainty -->
+
+    <owl:ObjectProperty rdf:about="&wcms;alertCertainty">
+        <rdfs:domain rdf:resource="&wcms;Alert"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#alertExpires -->
+
+    <owl:ObjectProperty rdf:about="&wcms;alertExpires">
+        <rdfs:domain rdf:resource="&wcms;Alert"/>
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#alertMsgType -->
+
+    <owl:ObjectProperty rdf:about="&wcms;alertMsgType">
+        <rdfs:domain rdf:resource="&wcms;Alert"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#alertOnset -->
+
+    <owl:ObjectProperty rdf:about="&wcms;alertOnset">
+        <rdfs:domain rdf:resource="&wcms;Alert"/>
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#alertResponseType -->
+
+    <owl:ObjectProperty rdf:about="&wcms;alertResponseType">
+        <rdfs:domain rdf:resource="&wcms;Alert"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#alertScope -->
+
+    <owl:ObjectProperty rdf:about="&wcms;alertScope">
+        <rdfs:domain rdf:resource="&wcms;Alert"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#alertSeverity -->
+
+    <owl:ObjectProperty rdf:about="&wcms;alertSeverity">
+        <rdfs:domain rdf:resource="&wcms;Alert"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#alertStatus -->
+
+    <owl:ObjectProperty rdf:about="&wcms;alertStatus">
+        <rdfs:domain rdf:resource="&wcms;Alert"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#alertUrgency -->
+
+    <owl:ObjectProperty rdf:about="&wcms;alertUrgency">
+        <rdfs:domain rdf:resource="&wcms;Alert"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#applicationCategory -->
+
+    <owl:ObjectProperty rdf:about="&wcms;applicationCategory">
+        <rdfs:domain rdf:resource="&schema;SoftwareApplication"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#applicationSubCategory -->
+
+    <owl:ObjectProperty rdf:about="&wcms;applicationSubCategory">
+        <rdfs:domain rdf:resource="&schema;SoftwareApplication"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#applicationSuite -->
+
+    <owl:ObjectProperty rdf:about="&wcms;applicationSuite">
+        <rdfs:domain rdf:resource="&schema;SoftwareApplication"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#arranger -->
+
+    <owl:ObjectProperty rdf:about="&wcms;arranger">
+        <rdfs:domain rdf:resource="&wcms;MusicWork"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#articleAbout -->
+
+    <owl:ObjectProperty rdf:about="&wcms;articleAbout">
+        <rdfs:comment xml:lang="en">The subject matter of the content.</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Article"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#articleAuthor -->
+
+    <owl:ObjectProperty rdf:about="&wcms;articleAuthor">
+        <rdfs:domain rdf:resource="&schema;Article"/>
+        <rdfs:range rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#articleContributor -->
+
+    <owl:ObjectProperty rdf:about="&wcms;articleContributor">
+        <rdfs:domain rdf:resource="&schema;Article"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#articleCreator -->
+
+    <owl:ObjectProperty rdf:about="&wcms;articleCreator">
+        <rdfs:domain rdf:resource="&schema;Article"/>
+        <rdfs:range rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#articleGenre -->
+
+    <owl:ObjectProperty rdf:about="&wcms;articleGenre">
+        <rdfs:domain rdf:resource="&schema;Article"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#articleHasAssociatedMedia -->
+
+    <owl:ObjectProperty rdf:about="&wcms;articleHasAssociatedMedia">
+        <rdfs:range rdf:resource="&wcms;MediaItem"/>
+        <rdfs:domain rdf:resource="&schema;Article"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#articleHasRelatedEvent -->
+
+    <owl:ObjectProperty rdf:about="&wcms;articleHasRelatedEvent">
+        <rdfs:domain rdf:resource="&schema;Article"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;Event"/>
+                    <rdf:Description rdf:about="&skos;ConceptScheme"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#articleMentions -->
+
+    <owl:ObjectProperty rdf:about="&wcms;articleMentions">
+        <rdfs:domain rdf:resource="&schema;Article"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#attendee -->
+
+    <owl:ObjectProperty rdf:about="&wcms;attendee">
+        <rdfs:domain rdf:resource="&schema;Event"/>
+        <rdfs:range rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#audience -->
+
+    <owl:ObjectProperty rdf:about="&wcms;audience">
+        <rdfs:domain rdf:resource="&abc;Program"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#audioDuration -->
+
+    <owl:ObjectProperty rdf:about="&wcms;audioDuration">
+        <rdfs:domain rdf:resource="&schema;AudioObject"/>
+        <rdfs:range rdf:resource="&schema;Duration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#audioEncodingFormat -->
+
+    <owl:ObjectProperty rdf:about="&wcms;audioEncodingFormat">
+        <rdfs:domain rdf:resource="&schema;AudioObject"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#audioRegionsAllowed -->
+
+    <owl:ObjectProperty rdf:about="&wcms;audioRegionsAllowed">
+        <rdfs:domain rdf:resource="&schema;AudioObject"/>
+        <rdfs:range rdf:resource="&schema;Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#blogAbout -->
+
+    <owl:ObjectProperty rdf:about="&wcms;blogAbout">
+        <rdfs:comment xml:lang="en">The subject matter of the content.</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Blog"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#blogAuthor -->
+
+    <owl:ObjectProperty rdf:about="&wcms;blogAuthor">
+        <rdfs:domain rdf:resource="&schema;Blog"/>
+        <rdfs:range rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#blogCreator -->
+
+    <owl:ObjectProperty rdf:about="&wcms;blogCreator">
+        <rdfs:domain rdf:resource="&schema;Blog"/>
+        <rdfs:range rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#blogGenre -->
+
+    <owl:ObjectProperty rdf:about="&wcms;blogGenre">
+        <rdfs:domain rdf:resource="&schema;Blog"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#blogHasAssociatedMedia -->
+
+    <owl:ObjectProperty rdf:about="&wcms;blogHasAssociatedMedia">
+        <rdfs:range rdf:resource="&wcms;MediaItem"/>
+        <rdfs:domain rdf:resource="&schema;Blog"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#blogMentions -->
+
+    <owl:ObjectProperty rdf:about="&wcms;blogMentions">
+        <rdfs:domain rdf:resource="&schema;Blog"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#composer -->
+
+    <owl:ObjectProperty rdf:about="&wcms;composer">
+        <rdfs:domain rdf:resource="&wcms;MusicWork"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#contentLocation -->
+
+    <owl:ObjectProperty rdf:about="&wcms;contentLocation">
+        <rdfs:domain rdf:resource="&schema;Article"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;GeoCoordinates"/>
+                    <rdf:Description rdf:about="&schema;Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#copyright -->
+
+    <owl:ObjectProperty rdf:about="&wcms;copyright">
+        <rdfs:domain rdf:resource="&schema;CreativeWork"/>
+        <rdfs:range rdf:resource="&odrl;Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#copyrightYear -->
+
+    <owl:ObjectProperty rdf:about="&wcms;copyrightYear">
+        <rdfs:domain rdf:resource="&schema;CreativeWork"/>
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#countriesNotSupported -->
+
+    <owl:ObjectProperty rdf:about="&wcms;countriesNotSupported">
+        <rdfs:range rdf:resource="&schema;Place"/>
+        <rdfs:domain rdf:resource="&schema;SoftwareApplication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#countriesSupported -->
+
+    <owl:ObjectProperty rdf:about="&wcms;countriesSupported">
+        <rdfs:range rdf:resource="&schema;Place"/>
+        <rdfs:domain rdf:resource="&schema;SoftwareApplication"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#creativeWorkHasReview -->
+
+    <owl:ObjectProperty rdf:about="&wcms;creativeWorkHasReview">
+        <rdfs:domain rdf:resource="&schema;CreativeWork"/>
+        <rdfs:range rdf:resource="&schema;Review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#creativeWorkIsCoveredByRightsPolicy -->
+
+    <owl:ObjectProperty rdf:about="&wcms;creativeWorkIsCoveredByRightsPolicy">
+        <owl:inverseOf rdf:resource="&wcms;rightsPolicyAppliesToCreativeWork"/>
+        <rdfs:domain rdf:resource="&schema;CreativeWork"/>
+        <rdfs:range rdf:resource="&odrl;Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#dateCreated -->
+
+    <owl:ObjectProperty rdf:about="&wcms;dateCreated">
+        <rdfs:domain rdf:resource="&schema;CreativeWork"/>
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#dateModified -->
+
+    <owl:ObjectProperty rdf:about="&wcms;dateModified">
+        <rdfs:domain rdf:resource="&schema;CreativeWork"/>
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#datePublished -->
+
+    <owl:ObjectProperty rdf:about="&wcms;datePublished">
+        <rdfs:domain rdf:resource="&schema;CreativeWork"/>
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#device -->
+
+    <owl:ObjectProperty rdf:about="&wcms;device">
+        <rdfs:domain rdf:resource="&schema;SoftwareApplication"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#editor -->
+
+    <owl:ObjectProperty rdf:about="&wcms;editor">
+        <rdfs:domain rdf:resource="&schema;Article"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#episodeContentRating -->
+
+    <owl:ObjectProperty rdf:about="&wcms;episodeContentRating">
+        <rdfs:domain rdf:resource="&abc;Episode"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#episodeDuration -->
+
+    <owl:ObjectProperty rdf:about="&wcms;episodeDuration">
+        <rdfs:range rdf:resource="&schema;Duration"/>
+        <rdfs:domain rdf:resource="&abc;Episode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#episodeHasEncoding -->
+
+    <owl:ObjectProperty rdf:about="&wcms;episodeHasEncoding">
+        <rdfs:domain rdf:resource="&abc;Episode"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;AudioObject"/>
+                    <rdf:Description rdf:about="&schema;VideoObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#eventDuration -->
+
+    <owl:ObjectProperty rdf:about="&wcms;eventDuration">
+        <rdfs:range rdf:resource="&schema;Duration"/>
+        <rdfs:domain rdf:resource="&schema;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#eventEndDateTime -->
+
+    <owl:ObjectProperty rdf:about="&wcms;eventEndDateTime">
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+        <rdfs:domain rdf:resource="&schema;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#eventHasRecording -->
+
+    <owl:ObjectProperty rdf:about="&wcms;eventHasRecording">
+        <rdfs:domain rdf:resource="&schema;Event"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;AudioObject"/>
+                    <rdf:Description rdf:about="&schema;VideoObject"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#eventIsCoveredByRightsPolicy -->
+
+    <owl:ObjectProperty rdf:about="&wcms;eventIsCoveredByRightsPolicy">
+        <owl:inverseOf rdf:resource="&wcms;rightsPolicyAppliesToEvent"/>
+        <rdfs:domain rdf:resource="&schema;Event"/>
+        <rdfs:range rdf:resource="&odrl;Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#eventLocation -->
+
+    <owl:ObjectProperty rdf:about="&wcms;eventLocation">
+        <rdfs:domain rdf:resource="&schema;Event"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;GeoCoordinates"/>
+                    <rdf:Description rdf:about="&schema;Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#eventOrganiser -->
+
+    <owl:ObjectProperty rdf:about="&wcms;eventOrganiser">
+        <rdfs:domain rdf:resource="&schema;Event"/>
+        <rdfs:range rdf:resource="&foaf;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#eventPerformer -->
+
+    <owl:ObjectProperty rdf:about="&wcms;eventPerformer">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:performer</rdfs:label>
+        <rdfs:domain rdf:resource="&schema;Event"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&foaf;Group"/>
+                    <rdf:Description rdf:about="&foaf;Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#eventStartDateTime -->
+
+    <owl:ObjectProperty rdf:about="&wcms;eventStartDateTime">
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+        <rdfs:domain rdf:resource="&schema;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#fileFormat -->
+
+    <owl:ObjectProperty rdf:about="&wcms;fileFormat">
+        <rdfs:domain rdf:resource="&schema;SoftwareApplication"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#hasAssociatedBroadcastEvent -->
+
+    <owl:ObjectProperty rdf:about="&wcms;hasAssociatedBroadcastEvent">
+        <rdfs:domain rdf:resource="&wcms;ScheduleEvent"/>
+        <rdfs:range rdf:resource="&abc;BroadcastEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#hasMusicRecording -->
+
+    <owl:ObjectProperty rdf:about="&wcms;hasMusicRecording">
+        <rdfs:domain rdf:resource="&wcms;MusicWork"/>
+        <rdfs:range rdf:resource="&schema;MusicRecording"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#hasMusicVideo -->
+
+    <owl:ObjectProperty rdf:about="&wcms;hasMusicVideo">
+        <rdfs:domain rdf:resource="&wcms;MusicWork"/>
+        <rdfs:range rdf:resource="&schema;MusicVideoObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#hasPublicationEvent -->
+
+    <owl:ObjectProperty rdf:about="&wcms;hasPublicationEvent">
+        <rdfs:range rdf:resource="&ebuccdm;PublicationEvent"/>
+        <rdfs:domain rdf:resource="&ebuccdm;Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#hasRelatedEvent -->
+
+    <owl:ObjectProperty rdf:about="&wcms;hasRelatedEvent">
+        <rdfs:domain rdf:resource="&abc;Program"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;Event"/>
+                    <rdf:Description rdf:about="&skos;ConceptScheme"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#hasRelatedLocation -->
+
+    <owl:ObjectProperty rdf:about="&wcms;hasRelatedLocation">
+        <rdfs:domain rdf:resource="&abc;Program"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;GeoCoordinates"/>
+                    <rdf:Description rdf:about="&schema;Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#imagePlaylistHasAssociatedMedia -->
+
+    <owl:ObjectProperty rdf:about="&wcms;imagePlaylistHasAssociatedMedia">
+        <rdfs:domain rdf:resource="&wcms;ImagePlaylist"/>
+        <rdfs:range rdf:resource="&wcms;MediaItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#imageThumbnail -->
+
+    <owl:ObjectProperty rdf:about="&wcms;imageThumbnail">
+        <rdfs:domain rdf:resource="&schema;ImageObject"/>
+        <rdfs:range rdf:resource="&schema;ImageObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#inMusicPlaylist -->
+
+    <owl:ObjectProperty rdf:about="&wcms;inMusicPlaylist">
+        <rdfs:range rdf:resource="&schema;MusicPlaylist"/>
+        <rdfs:domain rdf:resource="&schema;MusicRecording"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#instrumentator -->
+
+    <owl:ObjectProperty rdf:about="&wcms;instrumentator">
+        <rdfs:domain rdf:resource="&wcms;MusicWork"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#isDerivativeOfMusicWork -->
+
+    <owl:ObjectProperty rdf:about="&wcms;isDerivativeOfMusicWork">
+        <rdfs:domain rdf:resource="&wcms;MusicWork"/>
+        <rdfs:range rdf:resource="&wcms;MusicWork"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#isEncodingOfEpisode -->
+
+    <owl:ObjectProperty rdf:about="&wcms;isEncodingOfEpisode">
+        <owl:inverseOf rdf:resource="&wcms;episodeHasEncoding"/>
+        <rdfs:domain rdf:resource="&schema;AudioObject"/>
+        <rdfs:domain rdf:resource="&schema;VideoObject"/>
+        <rdfs:range rdf:resource="&abc;Episode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#isEncodingOfMusicRecording -->
+
+    <owl:ObjectProperty rdf:about="&wcms;isEncodingOfMusicRecording">
+        <owl:inverseOf rdf:resource="&wcms;musicRecordingHasEncoding"/>
+        <rdfs:domain rdf:resource="&schema;AudioObject"/>
+        <rdfs:range rdf:resource="&schema;MusicRecording"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#isEncodingOfMusicVideo -->
+
+    <owl:ObjectProperty rdf:about="&wcms;isEncodingOfMusicVideo">
+        <owl:inverseOf rdf:resource="&wcms;musicVideoHasEncoding"/>
+        <rdfs:range rdf:resource="&schema;MusicVideoObject"/>
+        <rdfs:domain rdf:resource="&schema;VideoObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#isPartOfMusicWork -->
+
+    <owl:ObjectProperty rdf:about="&wcms;isPartOfMusicWork">
+        <rdfs:domain rdf:resource="&wcms;MusicWork"/>
+        <rdfs:range rdf:resource="&wcms;MusicWork"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#label -->
+
+    <owl:ObjectProperty rdf:about="&wcms;label">
+        <rdfs:domain rdf:resource="&schema;MusicAlbum"/>
+        <rdfs:range rdf:resource="&foaf;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#language -->
+
+    <owl:ObjectProperty rdf:about="&wcms;language">
+        <rdfs:domain rdf:resource="&schema;CreativeWork"/>
+        <rdfs:range rdf:resource="&schema;Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#librettist -->
+
+    <owl:ObjectProperty rdf:about="&wcms;librettist">
+        <rdfs:domain rdf:resource="&wcms;MusicWork"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#logo -->
+
+    <owl:ObjectProperty rdf:about="&wcms;logo">
+        <rdfs:domain rdf:resource="&schema;Brand"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#lyricist -->
+
+    <owl:ObjectProperty rdf:about="&wcms;lyricist">
+        <rdfs:domain rdf:resource="&wcms;MusicWork"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicAlbumGenre -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicAlbumGenre">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:genre</rdfs:label>
+        <rdfs:domain rdf:resource="&schema;MusicAlbum"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicPlaylistHasAssociatedMedia -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicPlaylistHasAssociatedMedia">
+        <rdfs:range rdf:resource="&wcms;MediaItem"/>
+        <rdfs:domain rdf:resource="&schema;MusicPlaylist"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicPlaylistTrack -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicPlaylistTrack">
+        <owl:inverseOf rdf:resource="&wcms;inMusicPlaylist"/>
+        <rdfs:domain rdf:resource="&schema;MusicPlaylist"/>
+        <rdfs:range rdf:resource="&schema;MusicRecording"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicRecordingArtist -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicRecordingArtist">
+        <rdfs:domain rdf:resource="&schema;MusicRecording"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&foaf;Group"/>
+                    <rdf:Description rdf:about="&foaf;Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicRecordingDuration -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicRecordingDuration">
+        <rdfs:range rdf:resource="&schema;Duration"/>
+        <rdfs:domain rdf:resource="&schema;MusicRecording"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicRecordingGenre -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicRecordingGenre">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:genre</rdfs:label>
+        <rdfs:domain rdf:resource="&schema;MusicRecording"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicRecordingHasAssociatedProduct -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicRecordingHasAssociatedProduct">
+        <owl:inverseOf rdf:resource="&wcms;productHasAssociatedMusicRecording"/>
+        <rdfs:domain rdf:resource="&schema;MusicRecording"/>
+        <rdfs:range rdf:resource="&schema;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicRecordingHasEncoding -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicRecordingHasEncoding">
+        <rdfs:range rdf:resource="&schema;AudioObject"/>
+        <rdfs:domain rdf:resource="&schema;MusicRecording"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicRecordingProducer -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicRecordingProducer">
+        <rdfs:domain rdf:resource="&schema;MusicRecording"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicRecordingSoundEngineer -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicRecordingSoundEngineer">
+        <rdfs:domain rdf:resource="&schema;MusicRecording"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicVideoActor -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicVideoActor">
+        <rdfs:domain rdf:resource="&schema;MusicVideoObject"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&foaf;Group"/>
+                    <rdf:Description rdf:about="&foaf;Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicVideoArtist -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicVideoArtist">
+        <rdfs:domain rdf:resource="&schema;MusicVideoObject"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&foaf;Group"/>
+                    <rdf:Description rdf:about="&foaf;Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicVideoContentRating -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicVideoContentRating">
+        <rdfs:domain rdf:resource="&schema;MusicVideoObject"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicVideoDuration -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicVideoDuration">
+        <rdfs:range rdf:resource="&schema;Duration"/>
+        <rdfs:domain rdf:resource="&schema;MusicVideoObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicVideoGenre -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicVideoGenre">
+        <rdfs:domain rdf:resource="&schema;MusicVideoObject"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicVideoHasAssociatedProduct -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicVideoHasAssociatedProduct">
+        <owl:inverseOf rdf:resource="&wcms;productHasAssociatedMusicVideo"/>
+        <rdfs:domain rdf:resource="&schema;MusicVideoObject"/>
+        <rdfs:range rdf:resource="&schema;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicVideoHasEncoding -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicVideoHasEncoding">
+        <rdfs:domain rdf:resource="&schema;MusicVideoObject"/>
+        <rdfs:range rdf:resource="&schema;VideoObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicVideoProducer -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicVideoProducer">
+        <rdfs:domain rdf:resource="&schema;MusicVideoObject"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicVideoSoundEngineer -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicVideoSoundEngineer">
+        <rdfs:domain rdf:resource="&schema;MusicVideoObject"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#musicWorkGenre -->
+
+    <owl:ObjectProperty rdf:about="&wcms;musicWorkGenre">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:genre</rdfs:label>
+        <rdfs:domain rdf:resource="&wcms;MusicWork"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#operatingSystem -->
+
+    <owl:ObjectProperty rdf:about="&wcms;operatingSystem">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:operatingSystem</rdfs:label>
+        <rdfs:domain rdf:resource="&schema;SoftwareApplication"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#orchestrator -->
+
+    <owl:ObjectProperty rdf:about="&wcms;orchestrator">
+        <rdfs:domain rdf:resource="&wcms;MusicWork"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#ownedBy -->
+
+    <owl:ObjectProperty rdf:about="&wcms;ownedBy">
+        <rdfs:domain rdf:resource="&ebuccdm;Service"/>
+        <rdfs:range rdf:resource="&foaf;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#processorRequirements -->
+
+    <owl:ObjectProperty rdf:about="&wcms;processorRequirements">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:processorRequirements</rdfs:label>
+        <rdfs:domain rdf:resource="&schema;SoftwareApplication"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#productHasAssociatedMusicRecording -->
+
+    <owl:ObjectProperty rdf:about="&wcms;productHasAssociatedMusicRecording">
+        <rdfs:range rdf:resource="&schema;MusicRecording"/>
+        <rdfs:domain rdf:resource="&schema;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#productHasAssociatedMusicVideo -->
+
+    <owl:ObjectProperty rdf:about="&wcms;productHasAssociatedMusicVideo">
+        <rdfs:range rdf:resource="&schema;MusicVideoObject"/>
+        <rdfs:domain rdf:resource="&schema;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#productHasAssociatedProgram -->
+
+    <owl:ObjectProperty rdf:about="&wcms;productHasAssociatedProgram">
+        <rdfs:domain rdf:resource="&schema;Product"/>
+        <rdfs:range rdf:resource="&abc;Program"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#productIsCoveredByRightsPolicy -->
+
+    <owl:ObjectProperty rdf:about="&wcms;productIsCoveredByRightsPolicy">
+        <owl:inverseOf rdf:resource="&wcms;rightsPolicyAppliesToProduct"/>
+        <rdfs:domain rdf:resource="&schema;Product"/>
+        <rdfs:range rdf:resource="&odrl;Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#productReleaseDate -->
+
+    <owl:ObjectProperty rdf:about="&wcms;productReleaseDate">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:releaseDate</rdfs:label>
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+        <rdfs:domain rdf:resource="&schema;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#productionCompany -->
+
+    <owl:ObjectProperty rdf:about="&wcms;productionCompany">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:productionCompany</rdfs:label>
+        <rdfs:domain rdf:resource="&abc;Program"/>
+        <rdfs:range rdf:resource="&foaf;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#programAbout -->
+
+    <owl:ObjectProperty rdf:about="&wcms;programAbout">
+        <rdfs:domain rdf:resource="&abc;Program"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#programActor -->
+
+    <owl:ObjectProperty rdf:about="&wcms;programActor">
+        <rdfs:domain rdf:resource="&abc;Program"/>
+        <rdfs:range rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#programContributor -->
+
+    <owl:ObjectProperty rdf:about="&wcms;programContributor">
+        <rdfs:domain rdf:resource="&abc;Program"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#programDirector -->
+
+    <owl:ObjectProperty rdf:about="&wcms;programDirector">
+        <rdfs:domain rdf:resource="&abc;Program"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#programGenre -->
+
+    <owl:ObjectProperty rdf:about="&wcms;programGenre">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:genre</rdfs:label>
+        <rdfs:domain rdf:resource="&abc;Program"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#programHasAssociatedMedia -->
+
+    <owl:ObjectProperty rdf:about="&wcms;programHasAssociatedMedia">
+        <rdfs:range rdf:resource="&wcms;MediaItem"/>
+        <rdfs:domain rdf:resource="&abc;Program"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#programHasAssociatedProduct -->
+
+    <owl:ObjectProperty rdf:about="&wcms;programHasAssociatedProduct">
+        <owl:inverseOf rdf:resource="&wcms;productHasAssociatedProgram"/>
+        <rdfs:range rdf:resource="&schema;Product"/>
+        <rdfs:domain rdf:resource="&abc;Program"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#programProducer -->
+
+    <owl:ObjectProperty rdf:about="&wcms;programProducer">
+        <rdfs:domain rdf:resource="&abc;Program"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#provider -->
+
+    <owl:ObjectProperty rdf:about="&wcms;provider">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:provider</rdfs:label>
+        <rdfs:domain rdf:resource="&schema;Article"/>
+        <rdfs:range rdf:resource="&foaf;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#publicationEventDuration -->
+
+    <owl:ObjectProperty rdf:about="&wcms;publicationEventDuration">
+        <rdfs:range rdf:resource="&schema;Duration"/>
+        <rdfs:domain rdf:resource="&ebuccdm;PublicationEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#publicationEventEndDateTime -->
+
+    <owl:ObjectProperty rdf:about="&wcms;publicationEventEndDateTime">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:endDateTime</rdfs:label>
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+        <rdfs:domain rdf:resource="&ebuccdm;PublicationEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#publicationEventStartDateTime -->
+
+    <owl:ObjectProperty rdf:about="&wcms;publicationEventStartDateTime">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:publicationStartDateTime</rdfs:label>
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+        <rdfs:domain rdf:resource="&ebuccdm;PublicationEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#publisher -->
+
+    <owl:ObjectProperty rdf:about="&wcms;publisher">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:publisher</rdfs:label>
+        <rdfs:domain rdf:resource="&schema;CreativeWork"/>
+        <rdfs:range rdf:resource="&foaf;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#publishes -->
+
+    <owl:ObjectProperty rdf:about="&wcms;publishes">
+        <rdfs:range rdf:resource="&wcms;MediaItem"/>
+        <rdfs:domain rdf:resource="&ebuccdm;PublicationEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#recipeCategory -->
+
+    <owl:ObjectProperty rdf:about="&wcms;recipeCategory">
+        <rdfs:domain rdf:resource="&schema;Recipe"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#recipeCreator -->
+
+    <owl:ObjectProperty rdf:about="&wcms;recipeCreator">
+        <rdfs:domain rdf:resource="&schema;Recipe"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#recipeCuisine -->
+
+    <owl:ObjectProperty rdf:about="&wcms;recipeCuisine">
+        <rdfs:domain rdf:resource="&schema;Recipe"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#recipeHasAssociatedMedia -->
+
+    <owl:ObjectProperty rdf:about="&wcms;recipeHasAssociatedMedia">
+        <rdfs:range rdf:resource="&wcms;MediaItem"/>
+        <rdfs:domain rdf:resource="&schema;Recipe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#regionsAllowed -->
+
+    <owl:ObjectProperty rdf:about="&wcms;regionsAllowed">
+        <rdfs:range rdf:resource="&schema;Place"/>
+        <rdfs:domain rdf:resource="&schema;VideoObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#reviewCreator -->
+
+    <owl:ObjectProperty rdf:about="&wcms;reviewCreator">
+        <rdfs:domain rdf:resource="&schema;Review"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#reviewHasAssociatedMedia -->
+
+    <owl:ObjectProperty rdf:about="&wcms;reviewHasAssociatedMedia">
+        <rdfs:range rdf:resource="&wcms;MediaItem"/>
+        <rdfs:domain rdf:resource="&schema;Review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#reviewRating -->
+
+    <owl:ObjectProperty rdf:about="&wcms;reviewRating">
+        <rdfs:domain rdf:resource="&schema;Review"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#rightsPolicyAppliesToCreativeWork -->
+
+    <owl:ObjectProperty rdf:about="&wcms;rightsPolicyAppliesToCreativeWork">
+        <rdfs:range rdf:resource="&schema;CreativeWork"/>
+        <rdfs:domain rdf:resource="&odrl;Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#rightsPolicyAppliesToEvent -->
+
+    <owl:ObjectProperty rdf:about="&wcms;rightsPolicyAppliesToEvent">
+        <rdfs:range rdf:resource="&schema;Event"/>
+        <rdfs:domain rdf:resource="&odrl;Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#rightsPolicyAppliesToProduct -->
+
+    <owl:ObjectProperty rdf:about="&wcms;rightsPolicyAppliesToProduct">
+        <rdfs:range rdf:resource="&schema;Product"/>
+        <rdfs:domain rdf:resource="&odrl;Policy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#role -->
+
+    <owl:ObjectProperty rdf:about="&wcms;role">
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+        <rdfs:domain rdf:resource="&foaf;Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#scheduleEventDuration -->
+
+    <owl:ObjectProperty rdf:about="&wcms;scheduleEventDuration">
+        <rdfs:domain rdf:resource="&wcms;ScheduleEvent"/>
+        <rdfs:range rdf:resource="&schema;Duration"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#scheduleEventEndDateTime -->
+
+    <owl:ObjectProperty rdf:about="&wcms;scheduleEventEndDateTime">
+        <rdfs:domain rdf:resource="&wcms;ScheduleEvent"/>
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#scheduleEventStartDateTime -->
+
+    <owl:ObjectProperty rdf:about="&wcms;scheduleEventStartDateTime">
+        <rdfs:domain rdf:resource="&wcms;ScheduleEvent"/>
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#scheduleHasScheduleEvent -->
+
+    <owl:ObjectProperty rdf:about="&wcms;scheduleHasScheduleEvent">
+        <rdfs:domain rdf:resource="&wcms;Schedule"/>
+        <rdfs:range rdf:resource="&wcms;ScheduleEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#scheduleHasService -->
+
+    <owl:ObjectProperty rdf:about="&wcms;scheduleHasService">
+        <rdfs:domain rdf:resource="&wcms;Schedule"/>
+        <rdfs:range rdf:resource="&ebuccdm;Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#segmentAbout -->
+
+    <owl:ObjectProperty rdf:about="&wcms;segmentAbout">
+        <rdfs:domain rdf:resource="&abc;Segment"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#segmentActor -->
+
+    <owl:ObjectProperty rdf:about="&wcms;segmentActor">
+        <rdfs:domain rdf:resource="&abc;Segment"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#segmentContributor -->
+
+    <owl:ObjectProperty rdf:about="&wcms;segmentContributor">
+        <rdfs:domain rdf:resource="&abc;Segment"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#segmentDirector -->
+
+    <owl:ObjectProperty rdf:about="&wcms;segmentDirector">
+        <rdfs:domain rdf:resource="&abc;Segment"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#segmentDuration -->
+
+    <owl:ObjectProperty rdf:about="&wcms;segmentDuration">
+        <rdfs:range rdf:resource="&schema;Duration"/>
+        <rdfs:domain rdf:resource="&abc;Segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#segmentGenre -->
+
+    <owl:ObjectProperty rdf:about="&wcms;segmentGenre">
+        <rdfs:domain rdf:resource="&abc;Segment"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#segmentHasAssociatedMedia -->
+
+    <owl:ObjectProperty rdf:about="&wcms;segmentHasAssociatedMedia">
+        <rdfs:range rdf:resource="&wcms;MediaItem"/>
+        <rdfs:domain rdf:resource="&abc;Segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#segmentHasRelatedEvent -->
+
+    <owl:ObjectProperty rdf:about="&wcms;segmentHasRelatedEvent">
+        <rdfs:domain rdf:resource="&abc;Segment"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;Event"/>
+                    <rdf:Description rdf:about="&skos;ConceptScheme"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#segmentHasRelatedLocation -->
+
+    <owl:ObjectProperty rdf:about="&wcms;segmentHasRelatedLocation">
+        <rdfs:domain rdf:resource="&abc;Segment"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&schema;GeoCoordinates"/>
+                    <rdf:Description rdf:about="&schema;Place"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#segmentProducer -->
+
+    <owl:ObjectProperty rdf:about="&wcms;segmentProducer">
+        <rdfs:domain rdf:resource="&abc;Segment"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#segmentStartDateTime -->
+
+    <owl:ObjectProperty rdf:about="&wcms;segmentStartDateTime">
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+        <rdfs:domain rdf:resource="&abc;Segment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#seriesEndDate -->
+
+    <owl:ObjectProperty rdf:about="&wcms;seriesEndDate">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:seriesEndDate</rdfs:label>
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+        <rdfs:domain rdf:resource="&abc;Series"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#seriesStartDate -->
+
+    <owl:ObjectProperty rdf:about="&wcms;seriesStartDate">
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+        <rdfs:domain rdf:resource="&abc;Series"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#serviceHasBrand -->
+
+    <owl:ObjectProperty rdf:about="&wcms;serviceHasBrand">
+        <rdfs:range rdf:resource="&schema;Brand"/>
+        <rdfs:domain rdf:resource="&ebuccdm;Service"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#serviceType -->
+
+    <owl:ObjectProperty rdf:about="&wcms;serviceType">
+        <rdfs:domain rdf:resource="&ebuccdm;Service"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#sourceOrganisation -->
+
+    <owl:ObjectProperty rdf:about="&wcms;sourceOrganisation">
+        <rdfs:domain rdf:resource="&schema;Article"/>
+        <rdfs:range rdf:resource="&foaf;Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#translator -->
+
+    <owl:ObjectProperty rdf:about="&wcms;translator">
+        <rdfs:domain rdf:resource="&wcms;MusicWork"/>
+        <rdfs:range rdf:resource="&foaf;Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#userCommentDateTime -->
+
+    <owl:ObjectProperty rdf:about="&wcms;userCommentDateTime">
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+        <rdfs:domain rdf:resource="&schema;UserComments"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#userCommentDiscusses -->
+
+    <owl:ObjectProperty rdf:about="&wcms;userCommentDiscusses">
+        <rdfs:range rdf:resource="&schema;CreativeWork"/>
+        <rdfs:domain rdf:resource="&schema;UserComments"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#userInteractionDuration -->
+
+    <owl:ObjectProperty rdf:about="&wcms;userInteractionDuration">
+        <rdfs:range rdf:resource="&schema;Duration"/>
+        <rdfs:domain rdf:resource="&schema;UserInteraction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#userInteractionEndDateTime -->
+
+    <owl:ObjectProperty rdf:about="&wcms;userInteractionEndDateTime">
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+        <rdfs:domain rdf:resource="&schema;UserInteraction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#userInteractionStartDateTime -->
+
+    <owl:ObjectProperty rdf:about="&wcms;userInteractionStartDateTime">
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+        <rdfs:domain rdf:resource="&schema;UserInteraction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#videoDuration -->
+
+    <owl:ObjectProperty rdf:about="&wcms;videoDuration">
+        <rdfs:range rdf:resource="&schema;Duration"/>
+        <rdfs:domain rdf:resource="&schema;VideoObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#videoEncodingFormat -->
+
+    <owl:ObjectProperty rdf:about="&wcms;videoEncodingFormat">
+        <rdfs:domain rdf:resource="&schema;VideoObject"/>
+        <rdfs:range rdf:resource="&skos;ConceptScheme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#videoPlaylistHasAssociatedMedia -->
+
+    <owl:ObjectProperty rdf:about="&wcms;videoPlaylistHasAssociatedMedia">
+        <rdfs:range rdf:resource="&wcms;MediaItem"/>
+        <rdfs:domain rdf:resource="&wcms;VideoPlaylist"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#videoThumbnail -->
+
+    <owl:ObjectProperty rdf:about="&wcms;videoThumbnail">
+        <rdfs:range rdf:resource="&schema;ImageObject"/>
+        <rdfs:domain rdf:resource="&schema;VideoObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/blogPost -->
+
+    <owl:ObjectProperty rdf:about="&schema;blogPost">
+        <rdfs:isDefinedBy rdf:resource="&schema;Blog"/>
+        <rdfs:domain rdf:resource="&schema;Blog"/>
+        <rdfs:range rdf:resource="&schema;BlogPosting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/catalog -->
+
+    <owl:ObjectProperty rdf:about="&schema;catalog">
+        <rdfs:range rdf:resource="&schema;DataCatalog"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;Dataset"/>
+        <rdfs:domain rdf:resource="&schema;Dataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/comment -->
+
+    <owl:ObjectProperty rdf:about="&schema;comment">
+        <rdfs:domain rdf:resource="&schema;CreativeWork"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;CreativeWork"/>
+        <rdfs:range rdf:resource="&schema;UserComments"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/containedIn -->
+
+    <owl:ObjectProperty rdf:about="&schema;containedIn">
+        <rdfs:range rdf:resource="&schema;Place"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;Place"/>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/cookTime -->
+
+    <owl:ObjectProperty rdf:about="&schema;cookTime">
+        <rdfs:range rdf:resource="&schema;Duration"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;Recipe"/>
+        <rdfs:domain rdf:resource="&schema;Recipe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/dataset -->
+
+    <owl:ObjectProperty rdf:about="&schema;dataset">
+        <rdfs:domain rdf:resource="&schema;DataCatalog"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;DataCatalog"/>
+        <rdfs:range rdf:resource="&schema;Dataset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/geo -->
+
+    <owl:ObjectProperty rdf:about="&schema;geo">
+        <rdfs:range rdf:resource="&schema;GeoCoordinates"/>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/inAlbum -->
+
+    <owl:ObjectProperty rdf:about="&schema;inAlbum">
+        <rdfs:range rdf:resource="&schema;MusicAlbum"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;MusicRecording"/>
+        <rdfs:domain rdf:resource="&schema;MusicRecording"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="&schema;isRelatedTo">
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+        <rdfs:range rdf:resource="&schema;Product"/>
+        <rdfs:domain rdf:resource="&schema;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/isSimilarTo -->
+
+    <owl:ObjectProperty rdf:about="&schema;isSimilarTo">
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+        <rdfs:range rdf:resource="&schema;Product"/>
+        <rdfs:domain rdf:resource="&schema;Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/prepTime -->
+
+    <owl:ObjectProperty rdf:about="&schema;prepTime">
+        <rdfs:range rdf:resource="&schema;Duration"/>
+        <rdfs:domain rdf:resource="&schema;Recipe"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;Recipe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/spatial -->
+
+    <owl:ObjectProperty rdf:about="&schema;spatial">
+        <rdfs:domain rdf:resource="&schema;Dataset"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;Dataset"/>
+        <rdfs:range rdf:resource="&schema;Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/subEvent -->
+
+    <owl:ObjectProperty rdf:about="&schema;subEvent">
+        <rdfs:isDefinedBy rdf:resource="&schema;Event"/>
+        <rdfs:domain rdf:resource="&schema;Event"/>
+        <rdfs:range rdf:resource="&schema;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/superEvent -->
+
+    <owl:ObjectProperty rdf:about="&schema;superEvent">
+        <rdfs:isDefinedBy rdf:resource="&schema;Event"/>
+        <rdfs:domain rdf:resource="&schema;Event"/>
+        <rdfs:range rdf:resource="&schema;Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/temporal -->
+
+    <owl:ObjectProperty rdf:about="&schema;temporal">
+        <rdfs:isDefinedBy rdf:resource="&schema;Dataset"/>
+        <rdfs:domain rdf:resource="&schema;Dataset"/>
+        <rdfs:range rdf:resource="&schema;DateTime"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/totalTime -->
+
+    <owl:ObjectProperty rdf:about="&schema;totalTime">
+        <rdfs:range rdf:resource="&schema;Duration"/>
+        <rdfs:domain rdf:resource="&schema;Recipe"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;Recipe"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/tracks -->
+
+    <owl:ObjectProperty rdf:about="&schema;tracks">
+        <rdfs:isDefinedBy rdf:resource="&schema;MusicPlaylist"/>
+        <rdfs:range rdf:resource="&schema;MusicRecording"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#derivedFrom -->
+
+    <owl:ObjectProperty rdf:about="&abc;derivedFrom">
+        <rdfs:label rdf:datatype="&xsd;string">derived from</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Associates an Episode with an Episode it is derived from [based on TV-Anytime].</rdfs:comment>
+        <vs:term_status>Stable</vs:term_status>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isVersionOf"/>
+        <rdfs:range rdf:resource="&abc;Episode"/>
+        <rdfs:domain rdf:resource="&abc;Episode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#hasDerivation -->
+
+    <owl:ObjectProperty rdf:about="&abc;hasDerivation">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label rdf:datatype="&xsd;string">has derivation</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Associates an Episode with its derivation [based on TV-Anytime].</rdfs:comment>
+        <vs:term_status>Stable</vs:term_status>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasVersion"/>
+        <rdfs:range rdf:resource="&abc;Episode"/>
+        <rdfs:domain rdf:resource="&abc;Episode"/>
+        <owl:inverseOf rdf:resource="&abc;derivedFrom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#hasEpisode -->
+
+    <owl:ObjectProperty rdf:about="&abc;hasEpisode">
+        <rdfs:label rdf:datatype="&xsd;string">has episode</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Associates a Program Group with an Episode.</rdfs:comment>
+        <vs:term_status>Stable</vs:term_status>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasPart"/>
+        <rdfs:range rdf:resource="&abc;Episode"/>
+        <rdfs:domain rdf:resource="&abc;ProgramGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#hasGroup -->
+
+    <rdf:Description rdf:about="&abc;hasGroup">
+        <rdfs:range rdf:resource="&abc;ProgramGroup"/>
+        <rdfs:domain rdf:resource="&abc;ProgramGroup"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#hasParentEpisode -->
+
+    <rdf:Description rdf:about="&abc;hasParentEpisode">
+        <rdfs:range rdf:resource="&abc;Episode"/>
+        <rdfs:domain rdf:resource="&abc;Episode"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#hasParentGroup -->
+
+    <rdf:Description rdf:about="&abc;hasParentGroup">
+        <rdfs:domain rdf:resource="&abc;ProgramGroup"/>
+        <rdfs:range rdf:resource="&abc;ProgramGroup"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#hasSegment -->
+
+    <rdf:Description rdf:about="&abc;hasSegment">
+        <rdfs:domain rdf:resource="&abc;Episode"/>
+        <rdfs:range rdf:resource="&abc;Segment"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#isEpisodeOf -->
+
+    <owl:ObjectProperty rdf:about="&abc;isEpisodeOf">
+        <rdfs:label rdf:datatype="&xsd;string">is episode of</rdfs:label>
+        <rdfs:comment rdf:datatype="&xsd;string">Associates an Episode with a Program Group.</rdfs:comment>
+        <vs:term_status>Stable</vs:term_status>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+        <rdfs:domain rdf:resource="&abc;Episode"/>
+        <rdfs:range rdf:resource="&abc;ProgramGroup"/>
+        <owl:inverseOf rdf:resource="&abc;hasEpisode"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#isGroupOf -->
+
+    <rdf:Description rdf:about="&abc;isGroupOf">
+        <rdfs:domain rdf:resource="&abc;ProgramGroup"/>
+        <rdfs:range rdf:resource="&abc;ProgramGroup"/>
+        <owl:inverseOf rdf:resource="&abc;hasGroup"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#isSegmentOf -->
+
+    <rdf:Description rdf:about="&abc;isSegmentOf">
+        <rdfs:range rdf:resource="&abc;Episode"/>
+        <rdfs:domain rdf:resource="&abc;Segment"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#segmentGroupHasPart -->
+
+    <rdf:Description rdf:about="&abc;segmentGroupHasPart">
+        <rdfs:range rdf:resource="&abc;Segment"/>
+        <rdfs:domain rdf:resource="&abc;SegmentGroup"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#segmentGroupIsPartOf -->
+
+    <rdf:Description rdf:about="&abc;segmentGroupIsPartOf">
+        <rdfs:domain rdf:resource="&abc;Segment"/>
+        <rdfs:range rdf:resource="&abc;SegmentGroup"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ebu.ch/metadata/ontologies/ebuccdm#hasParentService -->
+
+    <rdf:Description rdf:about="&ebuccdm;hasParentService">
+        <rdfs:domain rdf:resource="&ebuccdm;Service"/>
+        <rdfs:range rdf:resource="&ebuccdm;Service"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.ebu.ch/metadata/ontologies/ebuccdm#linksTo -->
+
+    <rdf:Description rdf:about="&ebuccdm;linksTo">
+        <rdfs:domain rdf:resource="&ebuccdm;PublicationEvent"/>
+        <rdfs:range rdf:resource="&ebuccdm;PublicationEvent"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#AggregateWork -->
+
+    <owl:Class rdf:about="&wcms;AggregateWork">
+        <rdfs:subClassOf rdf:resource="&wcms;MusicWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#Alert -->
+
+    <owl:Class rdf:about="&wcms;Alert"/>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#DiscreteWork -->
+
+    <owl:Class rdf:about="&wcms;DiscreteWork">
+        <rdfs:subClassOf rdf:resource="&wcms;MusicWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#ImagePlaylist -->
+
+    <owl:Class rdf:about="&wcms;ImagePlaylist">
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#InteractiveResource -->
+
+    <owl:Class rdf:about="&wcms;InteractiveResource">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:InteractiveResource</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wcms;MediaItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#MediaItem -->
+
+    <owl:Class rdf:about="&wcms;MediaItem">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:MediaResource</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#MusicWork -->
+
+    <owl:Class rdf:about="&wcms;MusicWork">
+        <rdfs:label rdf:datatype="&xsd;string">wcms:MusicWork</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#Schedule -->
+
+    <owl:Class rdf:about="&wcms;Schedule"/>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#ScheduleEvent -->
+
+    <owl:Class rdf:about="&wcms;ScheduleEvent"/>
+    
+
+
+    <!-- http://abc.net.au/ontologies/2013/WcmsDomainModel#VideoPlaylist -->
+
+    <owl:Class rdf:about="&wcms;VideoPlaylist">
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/AdministrativeArea -->
+
+    <owl:Class rdf:about="&schema;AdministrativeArea">
+        <rdfs:label xml:lang="en">Administrative Area</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Place"/>
+        <rdfs:comment xml:lang="en">A geographical region under the jurisdiction of a particular government.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;AdministrativeArea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Article -->
+
+    <owl:Class rdf:about="&schema;Article">
+        <rdfs:label xml:lang="en">Article</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+        <rdfs:comment xml:lang="en">An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Article"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/AudioObject -->
+
+    <owl:Class rdf:about="&schema;AudioObject">
+        <rdfs:label xml:lang="en">Audio Object</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wcms;MediaItem"/>
+        <rdfs:comment xml:lang="en">An audio file.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;AudioObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Blog -->
+
+    <owl:Class rdf:about="&schema;Blog">
+        <rdfs:label xml:lang="en">Blog</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+        <rdfs:comment xml:lang="en">A blog</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Blog"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/BlogPosting -->
+
+    <owl:Class rdf:about="&schema;BlogPosting">
+        <rdfs:label xml:lang="en">Blog Posting</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Article"/>
+        <rdfs:comment xml:lang="en">A blog post.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;BlogPosting"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/BodyOfWater -->
+
+    <owl:Class rdf:about="&schema;BodyOfWater">
+        <rdfs:label xml:lang="en">Body of Water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Landform"/>
+        <rdfs:comment xml:lang="en">A body of water, such as a sea, ocean, or lake.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;BodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Brand -->
+
+    <owl:Class rdf:about="&schema;Brand">
+        <rdfs:label xml:lang="en">Brand</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Intangible"/>
+        <rdfs:comment xml:lang="en">A brand is a name used by an organization or business person for labeling a product, product group, or similar.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Brand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Canal -->
+
+    <owl:Class rdf:about="&schema;Canal">
+        <rdfs:label xml:lang="en">Canal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;BodyOfWater"/>
+        <rdfs:comment xml:lang="en">A canal, like the Panama Canal</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Canal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/ChildrensEvent -->
+
+    <owl:Class rdf:about="&schema;ChildrensEvent">
+        <rdfs:label xml:lang="en">Childrens Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Event"/>
+        <rdfs:comment xml:lang="en">Event type: Children&apos;s event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;ChildrensEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/City -->
+
+    <owl:Class rdf:about="&schema;City">
+        <rdfs:label xml:lang="en">City</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;AdministrativeArea"/>
+        <rdfs:comment xml:lang="en">A city or town.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;City"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/ComedyEvent -->
+
+    <owl:Class rdf:about="&schema;ComedyEvent">
+        <rdfs:label xml:lang="en">Comedy Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Event"/>
+        <rdfs:comment xml:lang="en">Event type: Comedy event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;ComedyEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Continent -->
+
+    <owl:Class rdf:about="&schema;Continent">
+        <rdfs:label xml:lang="en">Continent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Landform"/>
+        <rdfs:comment xml:lang="en">One of the continents (for example, Europe or Africa).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Continent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Country -->
+
+    <owl:Class rdf:about="&schema;Country">
+        <rdfs:label xml:lang="en">Country</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;AdministrativeArea"/>
+        <rdfs:comment xml:lang="en">A country.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/CreativeWork -->
+
+    <owl:Class rdf:about="&schema;CreativeWork">
+        <rdfs:label xml:lang="en">Creative Work</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Thing"/>
+        <rdfs:comment xml:lang="en">The most generic kind of creative work, including books, movies, photographs, software programs, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;CreativeWork"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/DanceEvent -->
+
+    <owl:Class rdf:about="&schema;DanceEvent">
+        <rdfs:label xml:lang="en">Dance Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Event"/>
+        <rdfs:comment xml:lang="en">Event type: A social dance.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;DanceEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/DataCatalog -->
+
+    <owl:Class rdf:about="&schema;DataCatalog">
+        <rdfs:label xml:lang="en">Data Catalog</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wcms;MediaItem"/>
+        <rdfs:comment xml:lang="en">A collection of datasets.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;DataCatalog"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Dataset -->
+
+    <owl:Class rdf:about="&schema;Dataset">
+        <rdfs:label xml:lang="en">Dataset</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wcms;MediaItem"/>
+        <rdfs:comment xml:lang="en">A body of structured information describing some topic(s) of interest.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Dataset"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/DateTime -->
+
+    <owl:Class rdf:about="&schema;DateTime">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Duration -->
+
+    <owl:Class rdf:about="&schema;Duration">
+        <rdfs:label xml:lang="en">Duration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Quantity"/>
+        <rdfs:comment xml:lang="en">Quantity: Duration (use  ISO 8601 duration format).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Duration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/EducationEvent -->
+
+    <owl:Class rdf:about="&schema;EducationEvent">
+        <rdfs:label xml:lang="en">Education Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Event"/>
+        <rdfs:comment xml:lang="en">Event type: Education event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;EducationEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Event -->
+
+    <owl:Class rdf:about="&schema;Event">
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Thing"/>
+        <rdfs:comment xml:lang="en">An event happening at a certain time at a certain location.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Festival -->
+
+    <owl:Class rdf:about="&schema;Festival">
+        <rdfs:label xml:lang="en">Festival</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Event"/>
+        <rdfs:comment xml:lang="en">Event type: Festival.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Festival"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/FoodEvent -->
+
+    <owl:Class rdf:about="&schema;FoodEvent">
+        <rdfs:label xml:lang="en">Food Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Event"/>
+        <rdfs:comment xml:lang="en">Event type: Food event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;FoodEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/GeoCoordinates -->
+
+    <owl:Class rdf:about="&schema;GeoCoordinates">
+        <rdfs:label xml:lang="en">Geo Coordinates</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;StructuredValue"/>
+        <rdfs:comment xml:lang="en">The geographic coordinates of a place or event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;GeoCoordinates"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/ImageObject -->
+
+    <owl:Class rdf:about="&schema;ImageObject">
+        <rdfs:label xml:lang="en">Image Object</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wcms;MediaItem"/>
+        <rdfs:comment xml:lang="en">An image file.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;ImageObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Intangible -->
+
+    <owl:Class rdf:about="&schema;Intangible">
+        <rdfs:label xml:lang="en">Intangible</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Thing"/>
+        <rdfs:comment xml:lang="en">A utility class that serves as the umbrella for a number of &apos;intangible&apos; things such as quantities, structured values, etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Intangible"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/ItemList -->
+
+    <owl:Class rdf:about="&schema;ItemList">
+        <rdfs:label xml:lang="en">Item List</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+        <rdfs:comment xml:lang="en">A list of items of any sort—for example, Top 10 Movies About Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists, which are often used only for formatting.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;ItemList"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/LakeBodyOfWater -->
+
+    <owl:Class rdf:about="&schema;LakeBodyOfWater">
+        <rdfs:label xml:lang="en">Lake Body of Water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;BodyOfWater"/>
+        <rdfs:comment xml:lang="en">A lake (for example, Lake Pontrachain).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;LakeBodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Landform -->
+
+    <owl:Class rdf:about="&schema;Landform">
+        <rdfs:label xml:lang="en">Landform</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Place"/>
+        <rdfs:comment xml:lang="en">A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain ranges, volcanoes, and the great ocean basins.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Landform"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/LandmarksOrHistoricalBuildings -->
+
+    <owl:Class rdf:about="&schema;LandmarksOrHistoricalBuildings">
+        <rdfs:label xml:lang="en">Landmarks or Historical Buildings</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Place"/>
+        <rdfs:comment xml:lang="en">An historical landmark or building.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;LandmarksOrHistoricalBuildings"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Language -->
+
+    <owl:Class rdf:about="&schema;Language">
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Intangible"/>
+        <rdfs:comment xml:lang="en">Natural languages such as Spanish, Tamil, Hindi, English, etc. and programming languages such as Scheme and Lisp.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Language"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/LiteraryEvent -->
+
+    <owl:Class rdf:about="&schema;LiteraryEvent">
+        <rdfs:label xml:lang="en">Literary Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Event"/>
+        <rdfs:comment xml:lang="en">Event type: Literary event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;LiteraryEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/MobileApplication -->
+
+    <owl:Class rdf:about="&schema;MobileApplication">
+        <rdfs:label xml:lang="en">Mobile Application</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;SoftwareApplication"/>
+        <rdfs:comment xml:lang="en">A mobile software application.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;MobileApplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Mountain -->
+
+    <owl:Class rdf:about="&schema;Mountain">
+        <rdfs:label xml:lang="en">Mountain</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Landform"/>
+        <rdfs:comment xml:lang="en">A mountain, like Mount Whitney or Mount Everest</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Mountain"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/MusicAlbum -->
+
+    <owl:Class rdf:about="&schema;MusicAlbum">
+        <rdfs:label xml:lang="en">Music Album</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;MusicPlaylist"/>
+        <rdfs:comment xml:lang="en">A collection of music tracks.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;MusicAlbum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/MusicEvent -->
+
+    <owl:Class rdf:about="&schema;MusicEvent">
+        <rdfs:label xml:lang="en">Music Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Event"/>
+        <rdfs:comment xml:lang="en">Event type: Music event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;MusicEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/MusicPlaylist -->
+
+    <owl:Class rdf:about="&schema;MusicPlaylist">
+        <rdfs:label xml:lang="en">Music Playlist</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+        <rdfs:comment xml:lang="en">A collection of music tracks in playlist form.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;MusicPlaylist"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/MusicRecording -->
+
+    <owl:Class rdf:about="&schema;MusicRecording">
+        <rdfs:label xml:lang="en">Music Recording</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+        <rdfs:comment xml:lang="en">A music recording (track), usually a single song.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;MusicRecording"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/MusicVideoObject -->
+
+    <owl:Class rdf:about="&schema;MusicVideoObject">
+        <rdfs:label xml:lang="en">Music Video Object</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+        <rdfs:comment xml:lang="en">A music video file.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;MusicVideoObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/NewsArticle -->
+
+    <owl:Class rdf:about="&schema;NewsArticle">
+        <rdfs:label xml:lang="en">News Article</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Article"/>
+        <rdfs:comment xml:lang="en">A news article</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;NewsArticle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/OceanBodyOfWater -->
+
+    <owl:Class rdf:about="&schema;OceanBodyOfWater">
+        <rdfs:label xml:lang="en">Ocean Body of Water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;BodyOfWater"/>
+        <rdfs:comment xml:lang="en">An ocean (for example, the Pacific).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;OceanBodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Place -->
+
+    <owl:Class rdf:about="&schema;Place">
+        <rdfs:label xml:lang="en">Place</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Thing"/>
+        <rdfs:comment xml:lang="en">Entities that have a somewhat fixed, physical extension.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Pond -->
+
+    <owl:Class rdf:about="&schema;Pond">
+        <rdfs:label xml:lang="en">Pond</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;BodyOfWater"/>
+        <rdfs:comment xml:lang="en">A pond</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Pond"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Product -->
+
+    <owl:Class rdf:about="&schema;Product">
+        <rdfs:label xml:lang="en">Product</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Thing"/>
+        <rdfs:comment xml:lang="en">A product is anything that is made available for sale—for example, a pair of shoes, a concert ticket, or a car. Commodity services, like haircuts, can also be represented using this type.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Quantity -->
+
+    <owl:Class rdf:about="&schema;Quantity">
+        <rdfs:label xml:lang="en">Quantity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Intangible"/>
+        <rdfs:comment xml:lang="en">Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are entities like &apos;3 Kg&apos; or &apos;4 milligrams&apos;.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Quantity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Recipe -->
+
+    <owl:Class rdf:about="&schema;Recipe">
+        <rdfs:label xml:lang="en">Recipe</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+        <rdfs:comment xml:lang="en">A recipe.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Recipe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Reservoir -->
+
+    <owl:Class rdf:about="&schema;Reservoir">
+        <rdfs:label xml:lang="en">Reservoir</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;BodyOfWater"/>
+        <rdfs:comment xml:lang="en">A reservoir, like the Lake Kariba reservoir.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Reservoir"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Review -->
+
+    <owl:Class rdf:about="&schema;Review">
+        <rdfs:label xml:lang="en">Review</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+        <rdfs:comment xml:lang="en">A review of an item - for example, a restaurant, movie, or store.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Review"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/RiverBodyOfWater -->
+
+    <owl:Class rdf:about="&schema;RiverBodyOfWater">
+        <rdfs:label xml:lang="en">River Body of Water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;BodyOfWater"/>
+        <rdfs:comment xml:lang="en">A river (for example, the broad majestic Shannon).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;RiverBodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/SeaBodyOfWater -->
+
+    <owl:Class rdf:about="&schema;SeaBodyOfWater">
+        <rdfs:label xml:lang="en">Sea Body of Water</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;BodyOfWater"/>
+        <rdfs:comment xml:lang="en">A sea (for example, the Caspian sea).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;SeaBodyOfWater"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/SocialEvent -->
+
+    <owl:Class rdf:about="&schema;SocialEvent">
+        <rdfs:label xml:lang="en">Social Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Event"/>
+        <rdfs:comment xml:lang="en">Event type: Social event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;SocialEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/SoftwareApplication -->
+
+    <owl:Class rdf:about="&schema;SoftwareApplication">
+        <rdfs:label xml:lang="en">Software Application</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wcms;MediaItem"/>
+        <rdfs:comment xml:lang="en">A software application.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;SoftwareApplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/SportsEvent -->
+
+    <owl:Class rdf:about="&schema;SportsEvent">
+        <rdfs:label xml:lang="en">Sports Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Event"/>
+        <rdfs:comment xml:lang="en">Event type: Sports event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;SportsEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/State -->
+
+    <owl:Class rdf:about="&schema;State">
+        <rdfs:label xml:lang="en">State</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;AdministrativeArea"/>
+        <rdfs:comment xml:lang="en">A state or province.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;State"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/StructuredValue -->
+
+    <owl:Class rdf:about="&schema;StructuredValue">
+        <rdfs:label xml:lang="en">Structured Value</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Intangible"/>
+        <rdfs:comment xml:lang="en">Structured values are strings—for example, addresses—that have certain constraints on their structure.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;StructuredValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/TheaterEvent -->
+
+    <owl:Class rdf:about="&schema;TheaterEvent">
+        <rdfs:label xml:lang="en">Theater Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Event"/>
+        <rdfs:comment xml:lang="en">Event type: Theater performance.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;TheaterEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Thing -->
+
+    <owl:Class rdf:about="&schema;Thing"/>
+    
+
+
+    <!-- http://schema.org/UserBlocks -->
+
+    <owl:Class rdf:about="&schema;UserBlocks">
+        <rdfs:label xml:lang="en">User Blocks</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;UserInteraction"/>
+        <rdfs:comment xml:lang="en">User interaction: Block this content.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;UserBlocks"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/UserCheckins -->
+
+    <owl:Class rdf:about="&schema;UserCheckins">
+        <rdfs:label xml:lang="en">User Checkins</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;UserInteraction"/>
+        <rdfs:comment xml:lang="en">User interaction: Check-in at a place.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;UserCheckins"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/UserComments -->
+
+    <owl:Class rdf:about="&schema;UserComments">
+        <rdfs:label xml:lang="en">User Comments</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;UserInteraction"/>
+        <rdfs:comment xml:lang="en">The UserInteraction event in which a user comments on an item.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;UserComments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/UserDownloads -->
+
+    <owl:Class rdf:about="&schema;UserDownloads">
+        <rdfs:label xml:lang="en">User Downloads</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;UserInteraction"/>
+        <rdfs:comment xml:lang="en">User interaction: Download of an item.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;UserDownloads"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/UserInteraction -->
+
+    <owl:Class rdf:about="&schema;UserInteraction">
+        <rdfs:label xml:lang="en">User Interaction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Thing"/>
+        <rdfs:comment xml:lang="en">A user interacting with a page</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;UserInteraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/UserLikes -->
+
+    <owl:Class rdf:about="&schema;UserLikes">
+        <rdfs:label xml:lang="en">User Likes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;UserInteraction"/>
+        <rdfs:comment xml:lang="en">User interaction: Like an item.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;UserLikes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/UserPageVisits -->
+
+    <owl:Class rdf:about="&schema;UserPageVisits">
+        <rdfs:label xml:lang="en">User Page Visits</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;UserInteraction"/>
+        <rdfs:comment xml:lang="en">User interaction: Visit to a web page.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;UserPageVisits"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/UserPlays -->
+
+    <owl:Class rdf:about="&schema;UserPlays">
+        <rdfs:label xml:lang="en">User Plays</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;UserInteraction"/>
+        <rdfs:comment xml:lang="en">User interaction: Play count of an item, for example a video or a song.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;UserPlays"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/UserPlusOnes -->
+
+    <owl:Class rdf:about="&schema;UserPlusOnes">
+        <rdfs:label xml:lang="en">User Plus Ones</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;UserInteraction"/>
+        <rdfs:comment xml:lang="en">User interaction: +1.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;UserPlusOnes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/UserTweets -->
+
+    <owl:Class rdf:about="&schema;UserTweets">
+        <rdfs:label xml:lang="en">User Tweets</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;UserInteraction"/>
+        <rdfs:comment xml:lang="en">User interaction: Tweets.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;UserTweets"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/VideoObject -->
+
+    <owl:Class rdf:about="&schema;VideoObject">
+        <rdfs:label xml:lang="en">Video Object</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&wcms;MediaItem"/>
+        <rdfs:comment xml:lang="en">A video file.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;VideoObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/VisualArtsEvent -->
+
+    <owl:Class rdf:about="&schema;VisualArtsEvent">
+        <rdfs:label xml:lang="en">Visual Arts Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Event"/>
+        <rdfs:comment xml:lang="en">Event type: Visual arts event.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;VisualArtsEvent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Volcano -->
+
+    <owl:Class rdf:about="&schema;Volcano">
+        <rdfs:label xml:lang="en">Volcano</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;Landform"/>
+        <rdfs:comment xml:lang="en">A volcano, like Fuji san</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Volcano"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Waterfall -->
+
+    <owl:Class rdf:about="&schema;Waterfall">
+        <rdfs:label xml:lang="en">Waterfall</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;BodyOfWater"/>
+        <rdfs:comment xml:lang="en">A waterfall, like Niagara</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;Waterfall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/WebApplication -->
+
+    <owl:Class rdf:about="&schema;WebApplication">
+        <rdfs:label xml:lang="en">Web Application</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;SoftwareApplication"/>
+        <rdfs:comment xml:lang="en">Web applications.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="&schema;WebApplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3.org/ns/odrl/2#Policy -->
+
+    <owl:Class rdf:about="&odrl;Policy">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#Brand -->
+
+    <owl:Class rdf:about="&abc;Brand">
+        <rdfs:label>Brand</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&abc;ProgramGroup"/>
+        <rdfs:comment>An overarching group representing a marketing brand. Such a group may contain groups of any other type or programmes that share the same branding, for example a show and its spin-off series. All members should be acquired if the group is selected.</rdfs:comment>
+        <rdfs:seeAlso>TV-Anytime ETSI TS 102 822-3-1 V1.6.1 (2010-07) ProgramGroupTypeType value Brand, defined as &apos;an overarching group representing a marketing brand. Such a group may contain groups of any other type or programmes that share the same branding, for example a show and its spin-off series. All members should be acquired if the group is selected.&apos;</rdfs:seeAlso>
+        <vs:term_status>Stable</vs:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#BroadcastEvent -->
+
+    <owl:Class rdf:about="&abc;BroadcastEvent">
+        <rdfs:label rdf:datatype="&xsd;string">Broadcast Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ebuccdm;PublicationEvent"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <owl:disjointWith rdf:resource="&abc;OnDemandEvent"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes a broadcast event that is part of a schedule [based on TV-Anytime].</rdfs:comment>
+        <vs:term_status>Stable</vs:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#Concept -->
+
+    <owl:Class rdf:about="&abc;Concept">
+        <rdfs:label>Concept</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&abc;ProgramGroup"/>
+        <rdfs:seeAlso>TV-Anytime ETSI TS 102 822-3-1 V1.6.1 (2010-07) ProgramGroupTypeType value ProgramConcept, defined as &apos;the editorial concept for a programme from which specific programme versions have been derived (e.g. the concept of &quot;Blood Runner&quot; as opposed to &quot;Blood Runner - The Director&apos;s Cut&quot; as a specific version of that concept).&apos;</rdfs:seeAlso>
+        <vs:term_status>Stable</vs:term_status>
+        <rdfs:comment>The editorial concept for a programme from which specific programme versions have been derived (e.g. the concept of &quot;Blood Runner&quot; as opposed to &quot;Blood Runner - The Director&apos;s Cut&quot; as a specific version of that concept).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#Episode -->
+
+    <owl:Class rdf:about="&abc;Episode">
+        <rdfs:label rdf:datatype="&xsd;string">Episode</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&abc;Program"/>
+        <owl:disjointWith rdf:resource="&abc;ProgramGroup"/>
+        <rdfs:comment rdf:datatype="&xsd;string">An episode is an editorially complete piece of content.  An episode may or may not be part of a program group.  An episode is associated with a timeline.</rdfs:comment>
+        <rdfs:seeAlso>TV-Anytime ETSI TS 102 822-3-1 V1.6.1 (2010-07) Programme entity, defined as &apos;an editorially coherent piece of content, which may itselfaggregate other programmes&apos;.</rdfs:seeAlso>
+        <vs:term_status>Stable</vs:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#OnDemandEvent -->
+
+    <owl:Class rdf:about="&abc;OnDemandEvent">
+        <rdfs:label rdf:datatype="&xsd;string">On Demand Event</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&ebuccdm;PublicationEvent"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment rdf:datatype="&xsd;string">Describes an event where media can be acquired on demand (as opposed to broadcast).</rdfs:comment>
+        <vs:term_status>Stable</vs:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#Program -->
+
+    <owl:Class rdf:about="&abc;Program">
+        <rdfs:label rdf:datatype="&xsd;string">Program</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A program is either a program group or an episode.
+</rdfs:comment>
+        <vs:term_status>Stable</vs:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#ProgramGroup -->
+
+    <owl:Class rdf:about="&abc;ProgramGroup">
+        <rdfs:label rdf:datatype="&xsd;string">Program Group</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&abc;Program"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A program group is a grouping of episodes or other program groups.  Program group types inclue but are not limited to series, brand and show.</rdfs:comment>
+        <vs:term_status>Stable</vs:term_status>
+        <rdfs:seeAlso>TV-Anytime ETSI TS 102 822-3-1 V1.6.1 (2010-07) Programme Group entity, defined as &apos;a grouping of programmes. A number of different types of group have been identified, such as series, show and programme concept. Programme groups can also contain other programme groups.&apos;</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#Segment -->
+
+    <owl:Class rdf:about="&abc;Segment">
+        <rdfs:label rdf:datatype="&xsd;string">Segment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&schema;CreativeWork"/>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A segment is a continuous fragment of an episode.  An episode must have at least one, but may have many, segments.</rdfs:comment>
+        <rdfs:seeAlso>TV-Anytime ETSI TS 102 822-3-1 V1.6.1 (2010-07) Segment entity defined as &apos;a continuous fragment of a programme. A particular segment can belong to a single programme only, but it can be a member of multiple segment groups.&apos;</rdfs:seeAlso>
+        <vs:term_status>Stable</vs:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#SegmentGroup -->
+
+    <owl:Class rdf:about="&abc;SegmentGroup">
+        <rdfs:label rdf:datatype="&xsd;string">Segment Group</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A collection of segments that are grouped together, for a particular purpose or due to a shared property.</rdfs:comment>
+        <rdfs:seeAlso>TV-Anytime ETSI TS 102 822-3-1 V1.6.1 (2010-07) Segment Group entity defined as &apos;a collection of segments that are grouped together, for a particular purpose or due to a shared property. A segment group can contain segments or other segment groups.&apos;</rdfs:seeAlso>
+        <vs:term_status>Stable</vs:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#Series -->
+
+    <owl:Class rdf:about="&abc;Series">
+        <rdfs:label>Series</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&abc;ProgramGroup"/>
+        <rdfs:comment>TV-Anytime ETSI TS 102 822-3-1 V1.6.1 (2010-07) ProgramGroupTypeType value Series, defined as &apos;an ordered or unordered collection of programmes that is shown in a sequence (e.g. &quot;Friends&quot; season 1, episodes &quot;1 to n&quot;).&apos; </rdfs:comment>
+        <rdfs:seeAlso>TV-Anytime ETSI TS 102 822-3-1 V1.6.1 (2010-07) ProgramGroupTypeType value Series, defined as &apos;an ordered or unordered collection of programmes that is shown in a sequence (e.g. &quot;Friends&quot; season 1, episodes &quot;1 to n&quot;). An unbounded series (e.g. an ongoing drama series) may be considered to be a serial..&apos;</rdfs:seeAlso>
+        <vs:term_status>Stable</vs:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#Show -->
+
+    <owl:Class rdf:about="&abc;Show">
+        <rdfs:label>Show</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&abc;ProgramGroup"/>
+        <rdfs:seeAlso>TV-Anytime ETSI TS 102 822-3-1 V1.6.1 (2010-07) ProgramGroupTypeType value Show, defined as &apos;a programme theme that is typically be associated with a collection of series (e.g. all episodes of Friends).&apos;</rdfs:seeAlso>
+        <rdfs:comment>A programme theme that is typically be associated with a collection of series (e.g. all episodes of Friends).</rdfs:comment>
+        <vs:term_status>Stable</vs:term_status>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebu.ch/metadata/ontologies/ebuccdm#PublicationEvent -->
+
+    <owl:Class rdf:about="&ebuccdm;PublicationEvent">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment rdf:datatype="&xsd;string">To describe any manifestation of a media resource on any media (live, on demand, catch-up TV, etc.).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ebu.ch/metadata/ontologies/ebuccdm#Service -->
+
+    <owl:Class rdf:about="&ebuccdm;Service">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <rdfs:comment rdf:datatype="&xsd;string">A service operates one or more channels through which Mediaresources are distributed. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+    <owl:Class rdf:about="&skos;ConceptScheme"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="&foaf;Organization"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&schema;elevation">
+        <rdfs:isDefinedBy rdf:resource="&schema;GeoCoordinates"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;width">
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;copyrightHolder">
+        <rdfs:isDefinedBy rdf:resource="&schema;CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;award">
+        <rdfs:isDefinedBy rdf:resource="&schema;CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;sku">
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;gtin8">
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;educationalUse">
+        <rdfs:isDefinedBy rdf:resource="&schema;CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;gtin14">
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;isicV4">
+        <rdfs:isDefinedBy rdf:resource="&schema;Place"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;gtin13">
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;educationalAlignment">
+        <rdfs:isDefinedBy rdf:resource="&schema;CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;productionCompany">
+        <rdfs:isDefinedBy rdf:resource="&schema;VideoObject"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;offers">
+        <rdfs:isDefinedBy rdf:resource="&schema;CreativeWork"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;Event"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;awards">
+        <rdfs:isDefinedBy rdf:resource="&schema;CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;height">
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;alternativeHeadline">
+        <rdfs:isDefinedBy rdf:resource="&schema;CreativeWork"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;itemReviewed">
+        <rdfs:isDefinedBy rdf:resource="&schema;Review"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;globalLocationNumber">
+        <rdfs:isDefinedBy rdf:resource="&schema;Place"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;telephone">
+        <rdfs:isDefinedBy rdf:resource="&schema;Place"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;faxNumber">
+        <rdfs:isDefinedBy rdf:resource="&schema;Place"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;interactionCount">
+        <rdfs:isDefinedBy rdf:resource="&schema;CreativeWork"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;Place"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;itemCondition">
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;audience">
+        <rdfs:isDefinedBy rdf:resource="&schema;CreativeWork"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;manufacturer">
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;mpn">
+        <rdfs:isDefinedBy rdf:resource="&schema;Product"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;caption">
+        <rdfs:isDefinedBy rdf:resource="&schema;ImageObject"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;VideoObject"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;byArtist">
+        <rdfs:isDefinedBy rdf:resource="&schema;MusicAlbum"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;MusicRecording"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;address">
+        <rdfs:isDefinedBy rdf:resource="&schema;Place"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&schema;transcript">
+        <rdfs:isDefinedBy rdf:resource="&schema;AudioObject"/>
+        <rdfs:isDefinedBy rdf:resource="&schema;VideoObject"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

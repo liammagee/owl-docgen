@@ -1,0 +1,308 @@
+
+#macro ( annotation $owlClass $propName)
+    #foreach ($ontology in $manager.getOntologies())
+        #foreach ($annotation in $owlClass.getAnnotations($ontology))
+            #if ($annotation.getProperty().getIRI().getFragment().equals($propName))
+            ## Can't do casting here to OWLLiteral, so need to hope this always works
+                $annotation.getValue().getLiteral()
+            #end
+        #end
+    #end
+#end
+
+
+## Generate a data structure for the domain model OWL classes
+#macro ( treeData $owlClass )
+{
+label: '$owlClass.getIRI().getFragment()',
+id: '$owlClass.getIRI().toString()',
+namespace:  '$owlClass.getIRI().getNamespace()',
+children: [
+    #foreach ($child in $trimmer.sortClasses($reasoner.getSubClasses($owlClass, true).getFlattened()) )
+        #if (!$reasoner.getBottomClassNode().getEntities().contains($child))
+            #treeData( $child )
+        #end
+    #end
+]
+},
+#end
+
+#macro ( recursive $owlClass )
+<div class="data-$owlClass.getIRI().getFragment()">
+    <div class="details">
+        <div class="heading">Class Name: </div>
+        <div class="contents">
+            <strong>$owlClass.getIRI().getFragment()</strong>
+        </div>
+    </div>
+    <div class="details">
+        <div class="heading">Namespace: </div>
+        <div class="contents">
+            $owlClass.getIRI().getNamespace()
+        </div>
+    </div>
+    <div class="details">
+        <div class="heading">Label: </div>
+        <div class="contents">
+            #annotation( $owlClass, "label")
+        </div>
+    </div>
+    <div class="details">
+        <div class="heading">Comment: </div>
+        <div class="contents">
+            #annotation( $owlClass, "comment" )
+        </div>
+    </div>
+    <div class="details">
+        <div class="heading">Status: </div>
+        <div class="contents">
+            #annotation( $owlClass, "term_status" )
+        </div>
+    </div>
+    <div class="details">
+        <div class="heading">Parent classes: </div>
+        #set ($superClasses = $trimmer.sortClasses($reasoner.getSuperClasses($owlClass, true).getFlattened()))
+        <div class="contents">
+            #if ($superClasses.size() > 0)
+                <table>
+                    <tr>
+                        <th class="name">Class name</th>
+                        <th class="type">Schema</th>
+                    </tr>
+                    #foreach ($parentClass in $superClasses)
+                        <tr>
+                            <td><a class="classNames" data-class-name="$parentClass.getIRI().getFragment()" href="#">$parentClass.getIRI().getFragment()</a></td>
+                            <td>$parentClass.getIRI().getNamespace()</td>
+                        </tr>
+                    #end
+                </table>
+            #else
+                <em>This class has no parent classes.</em>
+            #end
+        </div>
+    </div>
+    <div class="details">
+        <div class="heading">Child classes: </div>
+        #set ($subClasses = $trimmer.sortClasses($reasoner.getSubClasses($owlClass, true).getFlattened()))
+        <div class="contents">
+            #if ($subClasses.size() > 0)
+                <table>
+                    <tr>
+                        <th class="name">Class name</th>
+                        <th class="type">Schema</th>
+                    </tr>
+                    #foreach ($childClass in $subClasses)
+                        #if (! $reasoner.getBottomClassNode().getEntities().contains($childClass))
+                            <tr>
+                                <td><a class="classNames" data-class-name="$childClass.getIRI().getFragment()" href="#">$childClass.getIRI().getFragment()</a></td>
+                                <td>$childClass.getIRI().getNamespace()</td>
+                            </tr>
+                        #end
+                    #end
+                </table>
+            #else
+                <em>This class has no child classes.</em>
+            #end
+        </div>
+    </div>
+    <div class="details">
+        <div class="heading">Object properties (<em>relationships</em>): </div>
+        #set ($objectPropertiesForClass = $objectProperties.get($owlClass))
+        <div class="contents">
+            #if ($objectPropertiesForClass.size() > 0)
+                <table>
+                    <tr>
+                        <th class="name">Property Name</th>
+                        <th class="type">Type(s)</th>
+                    </tr>
+                    #foreach ($objectProperty in $objectPropertiesForClass )
+                        <tr>
+                            <td>$objectProperty.getIRI().getFragment()</td>
+                            <td>
+                                #foreach ($rangeClass in $reasoner.getObjectPropertyRanges($objectProperty, true).getFlattened())
+                                    <div>
+                                        <a class="classNames" data-class-name="$rangeClass.getIRI().getFragment()" href="#">
+                                            $rangeClass.getIRI().getFragment()
+                                        </a>
+                                        [$rangeClass.getIRI().getNamespace()]
+                                    </div>
+                                #end
+                            </td>
+                        </tr>
+                    #end
+                </table>
+            #else
+                <em>This class has no object properties.</em>
+            #end
+        </div>
+    </div>
+    <div class="details">
+        <div class="heading">Data properties (<em>fields</em>): </div>
+        <div class="contents">
+            #if ($dataProperties.get($owlClass).size() > 0)
+                <table>
+                    <tr>
+                        <th class="name">Property Name</th>
+                        <th class="type">Type(s)</th>
+                    </tr>
+                    #foreach ($dataProperty in $dataProperties.get($owlClass) )
+                        <tr>
+                            <td>
+                                <div>$dataProperty.getIRI().getFragment()</div>
+                            </td>
+                            <td>
+                                #foreach($range in $dataProperty.getRanges($manager.getOntologies()))
+                                    <div>$range</div>
+                                #end
+                            </td>
+                        </tr>
+                    #end
+                </table>
+            #else
+                <em>This class has no data properties.</em>
+            #end
+        </div>
+    </div>
+    <div class="details">
+        <div class="heading">Complete Annotations: </div>
+        <div class="contents">
+            <table>
+                <tr>
+                    <th class="name">Annotation</th>
+                    <th class="type">Value(s)</th>
+                </tr>
+                #foreach ($ontology in $manager.getOntologies())
+                    #foreach ($annotation in $owlClass.getAnnotations($ontology))
+                        <tr>
+                            <td>$annotation.getProperty().getIRI().getFragment()</td>
+                            <td>
+                            ## Can't do casting here to OWLLiteral, so need to hope this always works
+                            $annotation.getValue().getLiteral()
+                            </td>
+                        </tr>
+                    #end
+                #end
+            </table>
+        </div>
+    </div>
+    <div class="details">
+        <div class="heading">Instances: </div>
+        #set ($instances = $reasoner.getInstances($owlClass, true).getFlattened())
+        <div class="contents">
+            #if ($instances.size() > 0)
+                #foreach ($instance in $reasoner.getInstances($owlClass, true).getFlattened())
+                    <div>
+                        $instance.getIRI().getFragment()
+                    </div>
+                #end
+            #else
+                <em>This class has no instances.</em>
+            #end
+        </div>
+    </div>
+</div>
+    #foreach ($child in $reasoner.getSubClasses($owlClass, true).getFlattened() )
+        #if (!$reasoner.getBottomClassNode().getEntities().contains($child))
+            #recursive( $child  )
+        #end
+    #end
+#end
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/domain.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/jqtree.css">
+    <script src="javascripts/jquery-2.0.2.js"></script>
+    <script src="javascripts/jquery.cookie.js"></script>
+    <script src="javascripts/tree.jquery.js"></script>
+    <script>
+
+        var showDetail = function(element) {
+            $('#content').html(element.html());
+            makeClassNamesClickable();
+        };
+
+        var makeClassNamesClickable = function() {
+            $('.classNames').click(function() {
+                var classRef = $(this).data('class-name');
+                var classDiv = $('.data-' + classRef);
+                showDetail(classDiv);
+                return false;
+            });
+        };
+
+        $(document).ready(function() {
+            $(".model-link").click(function(e) {
+                $('#content').html(e.target.id);
+            });
+
+            data = [
+                #foreach ($root in $roots )
+                    #treeData( $root )
+                #end
+            ];
+
+            makeClassNamesClickable();
+
+            var tree = $("#domain-model-tree");
+            tree.tree({
+                data: data,
+                selectable: true,
+                saveState: true,
+                onCreateLi: function(node, $li) {
+                    // Add 'icon' span before title
+                    ## Note: 'hidden' use of Velocity here with $namespace variable
+                    if (node.namespace == '$namespace') {
+                        $li.find('.jqtree-title').wrap('<strong>');
+                    }
+                }
+            });
+
+            tree.bind(
+                    'tree.click',
+                    function(event) {
+                        // The clicked node is 'event.node'
+                        var node = event.node;
+                        var nodeDetail = $('.data-' + node.name).first();
+                        showDetail(nodeDetail);
+                    }
+            );
+
+            tree.bind(
+                    'tree.contextmenu',
+                    function(event) {
+                        // The clicked node is 'event.node'
+                        var node = event.node;
+                        alert(node.name);
+                    }
+            );
+
+        });
+    </script>
+</head>
+<body>
+
+<div id="wrap">
+    <div id="header">
+##        <img id="abc-logo" src="images/abc_logo.jpg"/>
+##        <h1>ABC Domain Model v1.1 Representation</h1>
+        <h1>OSIS Representation (A or B)</h1>
+    </div>
+    <div id="container">
+        <div id="nav">
+            <div id="domain-model-tree"></div>
+        </div>
+        <div id="content">
+            <!-- Content should go here. -->
+        </div>
+    </div>
+</div>
+<div id="class-descriptions" style="display: none">
+    #foreach ($root in $roots )
+        #recursive( $root )
+    #end
+</div>
+</body>
+</html>

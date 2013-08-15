@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="freemarker">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/freemarker-2.3.19/lib/freemarker.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/lib/freemarker-2.3.19/docs/docs/api" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/lib/freemarker-2.3.19/src" />
+      <root url="file://$PROJECT_DIR$/lib/freemarker-2.3.19/examples/webapp1/WEB-INF/classes" />
+      <root url="file://$PROJECT_DIR$/lib/freemarker-2.3.19/examples/webapp2/WEB-INF/classes" />
+      <root url="file://$PROJECT_DIR$/lib/freemarker-2.3.19/examples/jsp-webapp/WEB-INF/classes" />
+      <root url="file://$PROJECT_DIR$/lib/freemarker-2.3.19/examples/struts-webapp/WEB-INF/classes" />
+    </SOURCES>
+  </library>
+</component>

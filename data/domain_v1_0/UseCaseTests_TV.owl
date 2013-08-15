@@ -1,0 +1,1733 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY po "http://purl.org/ontology/po/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY WcmsDomainModel "http://abc.net.au/ontologies/2013/WcmsDomainModel#" >
+    <!ENTITY ABCProgramReferenceModel "http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ABCProgramReferenceModel="http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#"
+     xmlns:WcmsDomainModel="http://abc.net.au/ontologies/2013/WcmsDomainModel#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="WcmsDomainModel.rdf"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000000724730470213 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000000724730470213">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>The Rudd Debate</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000000725782245508"/>
+        <ABCProgramReferenceModel:hasParentEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000068977207443683"/>
+        <ABCProgramReferenceModel:isParentEpisodeOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000068977207443683"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000000725782245508 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000000725782245508">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>The Rudd Debate [TC In 00:00:43, Duration 00:06:22]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000000829766442103"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000000829766442103 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000000829766442103">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV File The Rudd Debate</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000000848687944976 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000000848687944976">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Series"/>
+        <rdfs:label>The Hack Half Hour Series 1</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001085315370249"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001085315370249 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001085315370249">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>Episode 10 - Lock Up</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001190033509566"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001190033509566 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001190033509566">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Episode 10 [TC In 00:00:01, Duration 00:27:46]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001208193044926"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001208193044926 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001208193044926">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV File Episode 10</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001250395755885 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001250395755885">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>AM</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001759498957549"/>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013142188583744"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001759498957549 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001759498957549">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>23 April 2010 Published Edition</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001778681329330"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001808866217633"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001778681329330 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001778681329330">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>23 April [TC In 00:00:00, Duration 00:35:23]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001817730778073"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001808866217633 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001808866217633">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Melbourne Storm confessions throw rugby league into crisis [TC In 00:00:43, Duration 00:01:15]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001817730778073 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001817730778073">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File 23 April 2010 Published Edition</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001846569679945 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000001846569679945">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Brand"/>
+        <rdfs:label>ABC News</rdfs:label>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002748033798150"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002748033798150 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002748033798150">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Series"/>
+        <rdfs:label>ABC News (NSW), (M-F), (209)</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002764155791588"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002764155791588 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002764155791588">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>Episode 11, 24 May 2010</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002791749928552"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002806562714534"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002791749928552 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002791749928552">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Episode 11 etc. [TC In 00:00:00, Duration 00:28:45]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002833781358803"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002806562714534 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002806562714534">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Home-made roadside bombs [TC In 00:05:23, Duration 00:02:13]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002833781358803 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002833781358803">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV File Episode 11 etc.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002866702759708 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000002866702759708">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Brand"/>
+        <rdfs:label>Grandstand</rdfs:label>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000008578395013612"/>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000008631890094411"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000008578395013612 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000008578395013612">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Series"/>
+        <rdfs:label>AFL 2010</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000008620218156776"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000008620218156776 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000008620218156776">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>23 April 2010 Western Bulldogs v Adelaide</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000008631890094411 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000008631890094411">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Series"/>
+        <rdfs:label>Rugby Union Shute Shield Series 2010</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000009662569833875"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000009662569833875 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000009662569833875">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>Episode 3, Randwick v Eastern Suburbs</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000009685225870606"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000009685225870606 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000009685225870606">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Episode 3 etc. [TC In 00:00:03, Duration 00:01:35]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000009705459096058"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000009705459096058 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000009705459096058">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV File Episode 3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000009731538934417 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000009731538934417">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>All In The Mind</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000010064731566721"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000010064731566721 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000010064731566721">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>On the Couch: Perminder Sachdev and Norman Doidge</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000010088474335145"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000010088474335145 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000010088474335145">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>On the Couch etc. [TC In 00:1:57, Duration 00:29:57]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000010099299963822"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000010099299963822 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000010099299963822">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File On the Couch etc.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011485986804747 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011485986804747">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>The Science Show</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011791461808134"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011791461808134 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011791461808134">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>25 September 2010</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011814164438217"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011862233164829"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011814164438217 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011814164438217">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>25 September etc. [TC In 00:01:34, Duration 00:49:13]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011873708834223"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011862233164829 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011862233164829">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>GM crops to help feed the world [TC In 00:19:42, Duration 00:09:57]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011873708834223 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011873708834223">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File 25 September 2010</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011895349011955 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000011895349011955">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>The Music Show</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012082038584233"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012082038584233 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012082038584233">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>2 October 2010</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012098460230560"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012127179259375"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012098460230560 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012098460230560">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>2 October 2010 [TC In 00:04:13, Duration 01:56:23]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012144214547938"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012127179259375 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012127179259375">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Singer and composer Amal Murkus at Womadelaide 2010 [TC In 00:04:13, Duration 00:05:51]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012144214547938 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012144214547938">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File 2 October 2010</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012167213070096 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012167213070096">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>The Daily Planet</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012347960107779"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012347960107779 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012347960107779">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>Franca Masu</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012370993108062"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012370993108062 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012370993108062">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Franca Masu [TC In 00:03:23, Duration 00:39:01]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012394422851787"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012394422851787 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012394422851787">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File Franca Masu</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012419417069487 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012419417069487">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>The Book Show</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012534216355710"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012534216355710 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012534216355710">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>6 October 2010</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012550177202968"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012571713387315"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012550177202968 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012550177202968">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>6 October [TC In 00:00:03, Duration 00:43:21]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012588225480333"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012571713387315 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012571713387315">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Off The Shelf: Malcolm Fraser [TC In 00:09:22, Duration 00:07:34]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012588225480333 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012588225480333">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File 6 October 2010</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012611950266025 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012611950266025">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>Movietime</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012776615046605"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012776615046605 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012776615046605">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>24 September 2010</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012571713387315"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012792391949814"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012792391949814 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012792391949814">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>24 September[TC In 00:00:05, Duration 00:28:34]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012821449351803"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012812812139811 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012812812139811">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>The Girl Who Played With Fire [24 September 2010 TC In 00:07:15, Duration 00:05:23]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012821449351803 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012821449351803">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File 24 September 2010</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012856242015675 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000012856242015675">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>Breakfast</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013038797957841"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013038797957841 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013038797957841">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>6 October 2010*</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013072704100102"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013104765265697"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013072704100102 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013072704100102">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>6 October [TC In 00:00:00, Duration 02:16:45]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013091355604134"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013091355604134 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013091355604134">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File 6 October 2010</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013104765265697 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013104765265697">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>French financial trader sentenced to prison [TC In 00:35:04, Duration 00:05:06]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013142188583744 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013142188583744">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>6 October 2010 RN Edition</rdfs:label>
+        <ABCProgramReferenceModel:isParentEpisodeOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013038797957841"/>
+        <ABCProgramReferenceModel:hasParentEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013038797957841"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013503603330870"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013503603330870 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013503603330870">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>6 October [TC In 00:00:00, Duration 00:20:57]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013537660929531"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013537660929531 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000013537660929531">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File 6 October 2010 RN Edition</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000060035084788988 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000060035084788988">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>I, Spry: The Rise And Fall Of A Master Spy</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000060036508103962"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000060036508103962 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000060036508103962">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>I, Spry etc. [TC In 00:00:02, Duration 00:56:49]</rdfs:label>
+        <ABCProgramReferenceModel:isSegmentOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000060035084788988"/>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000060073025659127"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000060073025659127 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000060073025659127">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV I, Spry etc.</rdfs:label>
+        <ABCProgramReferenceModel:isInstantiationOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000060036508103962"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000060091114779951 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000060091114779951">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>Media Watch</rdfs:label>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061105123888371"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061105123888371 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061105123888371">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Series"/>
+        <rdfs:label>Series 2010</rdfs:label>
+        <ABCProgramReferenceModel:isGroupOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000060091114779951"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061131308550109 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061131308550109">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>Episode 1</rdfs:label>
+        <ABCProgramReferenceModel:isEpisodeOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061105123888371"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061153397532088"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061178188596595"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061153397532088 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061153397532088">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Episode 1[TC In 00:00:01, Duration 00:12:53]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061191092125954"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061178188596595 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061178188596595">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Lord of the Airwaves [TC In 00:01:21, Duration 00:05:22]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061191092125954 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061191092125954">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV File Episode 1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061215516064471 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061215516064471">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>Catalyst</rdfs:label>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061434826508397"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061434826508397 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061434826508397">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Series"/>
+        <rdfs:label>Series 11</rdfs:label>
+        <ABCProgramReferenceModel:isGroupOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061215516064471"/>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061466307185689"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061466307185689 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061466307185689">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>Episode 7</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061489941798468"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061522660605188"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061489941798468 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061489941798468">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Episode 7 [TC In 00:00:04, Duration 00:29:49]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061522660605188 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061522660605188">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Future Car [TC In 00:09:13, Duration 00:08:10]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061544018547608 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061544018547608">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV File Episode 7</rdfs:label>
+        <ABCProgramReferenceModel:isInstantiationOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061489941798468"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061564133327839 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061564133327839">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>Book Reading</rdfs:label>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061794270446942"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061794270446942 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061794270446942">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Series"/>
+        <rdfs:label>The River Wife</rdfs:label>
+        <ABCProgramReferenceModel:isGroupOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061564133327839"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061812632596600 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061812632596600">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>Episode 13</rdfs:label>
+        <ABCProgramReferenceModel:isEpisodeOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061794270446942"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061833111288166"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061833111288166 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061833111288166">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Episode 13 [TC In 00:00:03, Duration 00:19:45]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061853843462786"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061853843462786 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061853843462786">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File Episode 13</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061875448058063 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061875448058063">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Brand"/>
+        <rdfs:label>Boyer Lectures</rdfs:label>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062256922290123"/>
+        <ABCProgramReferenceModel:isGroupOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062275847727015"/>
+        <ABCProgramReferenceModel:hasParentGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062275847727015"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062256922290123 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062256922290123">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Series"/>
+        <rdfs:label>2008 Lecture Series – A Golden Age of Freedom</rdfs:label>
+        <ABCProgramReferenceModel:isGroupOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061875448058063"/>
+        <ABCProgramReferenceModel:hasParentGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062275847727015"/>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062301714017004"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062275847727015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062275847727015">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Brand"/>
+        <rdfs:label>Big Ideas</rdfs:label>
+        <ABCProgramReferenceModel:isParentGroupOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061875448058063"/>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000061875448058063"/>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062256922290123"/>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062370922951101"/>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062881078326714"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062301714017004 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062301714017004">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>Lecture 1, Aussie Rules: Bring Back the Pioneer</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062328088348100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062328088348100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062328088348100">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Lecture 1 etc. [TC In 00:00:00, Duration 00:57:45]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062352382883299"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062352382883299 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062352382883299">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File Lecture 1. etc.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062370922951101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062370922951101">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Series"/>
+        <rdfs:label>Series 3</rdfs:label>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062275847727015"/>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063789945806240"/>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063851486521331"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062738044735853 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062738044735853">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>Episode 45 - Sampler Show</rdfs:label>
+        <ABCProgramReferenceModel:isEpisodeOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062370922951101"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062771251140577 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062771251140577">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>Episode 45 - Sampler Show Highlights</rdfs:label>
+        <ABCProgramReferenceModel:isEpisodeOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062370922951101"/>
+        <ABCProgramReferenceModel:derivedFrom rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062738044735853"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062794452245187 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062794452245187">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Episode 45 [TC In 00:00:05, Duration 00:56:00]</rdfs:label>
+        <ABCProgramReferenceModel:isSegmentOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062738044735853"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062812432944969 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062812432944969">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Episode 45 Highlights etc. [TC In 00:00:00, Duration 00:29:15]</rdfs:label>
+        <ABCProgramReferenceModel:isSegmentOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062771251140577"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062827807360432 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062827807360432">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV File Episode 45 etc.</rdfs:label>
+        <ABCProgramReferenceModel:isInstantiationOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062794452245187"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062856949042685 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062856949042685">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File Episode 45 etc.</rdfs:label>
+        <ABCProgramReferenceModel:isInstantiationOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062794452245187"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062866987516290 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062866987516290">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV File Highlights</rdfs:label>
+        <ABCProgramReferenceModel:isInstantiationOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062812432944969"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062881078326714 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062881078326714">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>Episode 46 - Big Ideas Extended Mix</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063515365728325"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063515365728325 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063515365728325">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Episode 46 Extended etc. [TC In 00:00:05, Duration 00:58:10]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063549934005578 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063549934005578">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV File Episode 46 etc.</rdfs:label>
+        <ABCProgramReferenceModel:isInstantiationOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063515365728325"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063567597549129 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063567597549129">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>K Rudd etc. [TC In 00:00:04, Duration 00:50:00]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063764760346915 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063764760346915">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>K Rudd Highlights etc. [TC In 00:00:00, Duration 00:19:55]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063789945806240 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063789945806240">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>K Rudd: Powertrip Interrupted</rdfs:label>
+        <ABCProgramReferenceModel:isEpisodeOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062370922951101"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063567597549129"/>
+        <ABCProgramReferenceModel:hasDerivation rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063851486521331"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063851486521331 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063851486521331">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>K Rudd: Powertrip Interrupted Highlights</rdfs:label>
+        <ABCProgramReferenceModel:isEpisodeOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000062370922951101"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063764760346915"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063866736333249 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063866736333249">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV File K Rudd etc.</rdfs:label>
+        <ABCProgramReferenceModel:isInstantiationOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063567597549129"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063891651361555 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063891651361555">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File K Rudd etc.</rdfs:label>
+        <ABCProgramReferenceModel:isInstantiationOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063567597549129"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063902777933508 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063902777933508">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV File K Rudd Highlights</rdfs:label>
+        <ABCProgramReferenceModel:isInstantiationOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000063764760346915"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065073937511611 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065073937511611">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>Drive with Richard Glover</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065074951831587"/>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065144533330912"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065074951831587 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065074951831587">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>21 April 2010</rdfs:label>
+        <ABCProgramReferenceModel:isEpisodeOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065073937511611"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065107398265980"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065107398265980 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065107398265980">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>21 April 2010 [TC In 00:00:00, Duration 02:55:42]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065128075235539"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065128075235539 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065128075235539">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File 21 April 2010</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065144533330912 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065144533330912">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>Self Improvement Wednesday</rdfs:label>
+        <ABCProgramReferenceModel:isGroupOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065073937511611"/>
+        <ABCProgramReferenceModel:hasParentGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065073937511611"/>
+        <ABCProgramReferenceModel:isParentGroupOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065073937511611"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065298582476264 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065298582476264">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>The Difference Between Crocodiles and Alligators</rdfs:label>
+        <ABCProgramReferenceModel:hasParentEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065074951831587"/>
+        <ABCProgramReferenceModel:isEpisodeOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065144533330912"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065319973115577 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065319973115577">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>The Difference etc. [TC In 00:00:00, Duration 00:12:35]</rdfs:label>
+        <ABCProgramReferenceModel:isSegmentOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065298582476264"/>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065335199532622"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065335199532622 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065335199532622">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File The Difference etc.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065349322066910 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065349322066910">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>Afternoons with Christopher Lawrence</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066559717094491"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066559717094491 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066559717094491">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>26 February 2010</rdfs:label>
+        <ABCProgramReferenceModel:isEpisodeOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000065349322066910"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066577645433986"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066604437738874"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066577645433986 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066577645433986">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Afternoons etc. [TC In 00:00:00, Duration 03:55:13]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066604437738874 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066604437738874">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Last Hour [TC In 03:03:05, Duration 00:56:55]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066610723600625"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066610723600625 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066610723600625">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File Last Hour etc.</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066631115545970 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066631115545970">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Brand"/>
+        <rdfs:label>Hack</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000000724730470213"/>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000000848687944976"/>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066854774188618"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066854774188618 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066854774188618">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>Hack</rdfs:label>
+        <ABCProgramReferenceModel:isParentGroupOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066631115545970"/>
+        <ABCProgramReferenceModel:hasParentGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066631115545970"/>
+        <ABCProgramReferenceModel:isGroupOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066631115545970"/>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066866551298838"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066866551298838 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066866551298838">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>15 July 2010</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066887929722911"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066917230839394"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066887929722911 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066887929722911">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>15 July 2010 [TC In 00:03:04, Duration 00:28:58]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066935023894377"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066917230839394 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066917230839394">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Enrolled to vote yet? [TC In 00:10:36, Duration 00:06:41]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066935023894377 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066935023894377">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>Audio File 15 July 2010</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066954862304287 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066954862304287">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>Triple J TV with the Doctor</rdfs:label>
+        <ABCProgramReferenceModel:hasGroup rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000068948564003525"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000068948564003525 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000068948564003525">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Series"/>
+        <rdfs:label>Series 4</rdfs:label>
+        <ABCProgramReferenceModel:isGroupOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000066954862304287"/>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000068977207443683"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000068977207443683 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000068977207443683">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>Episode 42</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000068991586644671"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000068991586644671 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000068991586644671">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>Episode 42 [TC In 00:00:00, Duration 00:28:04]</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000069006489881255"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000069006489881255 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000069006489881255">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV File Episode 42</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000069030021499939 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000069030021499939">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Show"/>
+        <rdfs:label>Like A Version</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000070587489392366"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000070587489392366 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000070587489392366">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>The Kooks - Kids</rdfs:label>
+        <ABCProgramReferenceModel:isParentEpisodeOf rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000068977207443683"/>
+        <ABCProgramReferenceModel:hasParentEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000068977207443683"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000070601684264340 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000070601684264340">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>The Kooks etc. [TC In 00:00:00, Duration 00:04:41]</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000070617018446757 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/Examples.owl#OWLNamedIndividual_00000070617018446757">
+        <rdf:type rdf:resource="&WcmsDomainModel;MediaItem"/>
+        <rdfs:label>AV File The Kooks – Kids</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P$&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P$&apos;">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;ProgramGroup"/>
+        <rdfs:label>P4: Background Briefing</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P1&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P1&apos;">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;ProgramGroup"/>
+        <rdfs:label>P1: Life Matters</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P2&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P2&apos;">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;ProgramGroup"/>
+        <rdfs:label>P2: Sunday Extra</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P3&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P3&apos;">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;ProgramGroup"/>
+        <rdfs:label>P3: Sydney Writers Festival </rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS1">
+        <rdfs:label>AS1: CMS article for Body Sphere episode PE1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS2">
+        <rdfs:label>AS2: CMS article for Life Matters segment on life after redundancy from PE2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS3">
+        <rdfs:label>AS3: CMS article for Life Matters segment on faith and doubt from PE2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE1">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;BroadcastEvent"/>
+        <rdfs:label>BI1: Sunday Extra (PE3) on Radio National at 07:30, 2/9/12</rdfs:label>
+        <WcmsDomainModel:publishes rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE2">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;BroadcastEvent"/>
+        <rdfs:label>BI2: Background Briefing (PE4) on Radio National at 08:00, 2/9/12 (part of BI1)</rdfs:label>
+        <WcmsDomainModel:publishes rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE3">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;BroadcastEvent"/>
+        <rdfs:label>BI3: Background Briefing (PE4) on Radio Australia at 14:00, 3/9/12</rdfs:label>
+        <WcmsDomainModel:publishes rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI1">
+        <rdf:type rdf:resource="http://schema.org/AudioObject"/>
+        <rdfs:label>MI1: Audio File instantiation of BI1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI2">
+        <rdf:type rdf:resource="http://schema.org/AudioObject"/>
+        <rdfs:label>MI2: Audio File instantiation  of BI2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI3">
+        <rdf:type rdf:resource="http://schema.org/AudioObject"/>
+        <rdfs:label>MI3: Audio File instantiation of BI3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N1">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Service"/>
+        <rdfs:label>N1: Radio National</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N2">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Service"/>
+        <rdfs:label>N2: New England North West</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N3">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Service"/>
+        <rdfs:label>N3: Digital Extra</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE1">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>PE1: Body Sphere on Tango Nuevo</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE2">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>PE2: Life Matters produced on Monday 3/9/12</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS2"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE3">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>PE3: Sunday Extra produced for 2/9/12</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES1:_Sunday_Extra_produce_for_2/9/12:_Whole_Episode"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES2:_Sunday_Extra_produced_for_2/9/12:_Background_Briefing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE4">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>PE4: Background Briefing on rape in Democratic Republic of Congo</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES1:_Sunday_Extra_produce_for_2/9/12:_Whole_Episode -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES1:_Sunday_Extra_produce_for_2/9/12:_Whole_Episode">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>PES1: Sunday Extra produced for 2/9/12: Whole Episode</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI1"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES2:_Sunday_Extra_produced_for_2/9/12:_Background_Briefing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES2:_Sunday_Extra_produced_for_2/9/12:_Background_Briefing -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES2:_Sunday_Extra_produced_for_2/9/12:_Background_Briefing">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>PES2: Sunday Extra produced for 2/9/12: Background Briefing</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES3">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>PES3: Background Briefing on rape in Democratic Republic of Congo: Whole Episode</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#S1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#S1">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Schedule"/>
+        <rdfs:label>S1: Radio National, WA</rdfs:label>
+        <WcmsDomainModel:scheduleHasService rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N1"/>
+        <WcmsDomainModel:scheduleHasScheduleEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#S2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#S2">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Schedule"/>
+        <rdfs:label>S2: Radio National, NSW/VIC/TAS</rdfs:label>
+        <WcmsDomainModel:scheduleHasService rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N1"/>
+        <WcmsDomainModel:scheduleHasScheduleEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE2"/>
+        <WcmsDomainModel:scheduleHasScheduleEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE3"/>
+        <WcmsDomainModel:scheduleHasScheduleEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE4"/>
+        <WcmsDomainModel:scheduleHasScheduleEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#S3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#S3">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Schedule"/>
+        <rdfs:label rdf:datatype="&xsd;string">SE: Digital Extra</rdfs:label>
+        <WcmsDomainModel:scheduleHasService rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE1">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;ScheduleEvent"/>
+        <rdfs:label>SE1: RN Drive, Mondays 16:00-18:00, all platforms, Radio National WA (S1)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE2">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;ScheduleEvent"/>
+        <rdfs:label>SE2: RN Drive, Mondays 18:00-20:00, all platforms, Radio National NSW/VIC/TAS (S2)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE3">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;ScheduleEvent"/>
+        <rdfs:label>SE3: RN Drive, Tuesdays 18:00-20:00, all platforms, Radio National NSW/VIC/TAS (S2)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE4">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;ScheduleEvent"/>
+        <rdfs:label>SE4: Sunday Extra, Sundays 7:30-10:00, all platforms, Radio National NSW/VIC/TAS (S2)</rdfs:label>
+        <WcmsDomainModel:hasAssociatedBroadcastEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE5">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;ScheduleEvent"/>
+        <rdfs:label>SE5: Background Briefing, Tuesdays 14:00-14:45, all platforms, Radio National NSW/VIC/TAS (S2)</rdfs:label>
+        <WcmsDomainModel:hasAssociatedBroadcastEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#Friday">
+        <rdfs:label>Friday</rdfs:label>
+    </rdf:Description>
+
+</rdf:RDF>
+
+
+

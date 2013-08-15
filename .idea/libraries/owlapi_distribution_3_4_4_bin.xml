@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="owlapi-distribution-3.4.4-bin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/owlapi-distribution-3.4.4-bin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/owlapi-code/api/src/main/java" />
+      <root url="file://$PROJECT_DIR$/owlapi-code/impl/src/main/java" />
+      <root url="file://$PROJECT_DIR$/owlapi-code/tools/src/main/java" />
+      <root url="file://$PROJECT_DIR$/owlapi-code/parsers/src/main/java" />
+      <root url="file://$PROJECT_DIR$/owlapi-code/contract/src/main/java" />
+      <root url="file://$PROJECT_DIR$/owlapi-code/contract/src/test/java" />
+      <root url="file://$PROJECT_DIR$/owlapi-code/apibinding/src/main/java" />
+    </SOURCES>
+  </library>
+</component>

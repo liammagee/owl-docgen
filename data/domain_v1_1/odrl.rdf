@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://w3.org/ns/odrl/2#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:v="http://w3.org/ns/odrl/vocab#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >ODRL Model Ontology</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.w3.org/community/odrl/two/model/</rdfs:comment>
+      <owl:imports rdf:resource="skos.rdf"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2.0</owl:versionInfo>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Constraint"/>
+  <owl:Class rdf:ID="Party"/>
+  <owl:Class rdf:ID="Duty"/>
+  <owl:Class rdf:ID="Prohibition"/>
+  <owl:Class rdf:ID="Permission"/>
+  <owl:Class rdf:ID="Action"/>
+  <owl:ObjectProperty rdf:ID="hasAsset"/>
+  <owl:ObjectProperty rdf:ID="hasConstraint"/>
+  <owl:ObjectProperty rdf:ID="hasName"/>
+  <owl:ObjectProperty rdf:ID="hasOperator"/>
+  <owl:ObjectProperty rdf:ID="hasInheritFrom">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has inherit from</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasProhibition"/>
+  <owl:ObjectProperty rdf:ID="hasType"/>
+  <owl:ObjectProperty rdf:ID="hasInheritRelation">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has inherit relation</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPermission"/>
+  <owl:ObjectProperty rdf:ID="hasDuty"/>
+  <owl:ObjectProperty rdf:ID="hasAction"/>
+  <owl:ObjectProperty rdf:ID="hasParty"/>
+  <owl:ObjectProperty rdf:ID="hasUndefined"/>
+  <owl:ObjectProperty rdf:ID="hasFunction"/>
+  <owl:ObjectProperty rdf:ID="hasRelation"/>
+  <owl:ObjectProperty rdf:ID="hasScope"/>
+  <owl:ObjectProperty rdf:ID="hasConflict"/>
+  <owl:DatatypeProperty rdf:ID="hasUID"/>
+  <owl:DatatypeProperty rdf:ID="hasStatus"/>
+  <owl:DatatypeProperty rdf:ID="hasInheritAllowed">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has inherit allowed</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasRightOperand"/>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

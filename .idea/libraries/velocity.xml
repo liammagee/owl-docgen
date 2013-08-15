@@ -1,0 +1,33 @@
+<component name="libraryTable">
+  <library name="velocity">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/velocity-1.7/lib/antlr-2.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/velocity-1.7/lib/avalon-logkit-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/velocity-1.7/lib/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/velocity-1.7/lib/commons-lang-2.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/velocity-1.7/lib/commons-logging-1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/velocity-1.7/lib/jdom-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/velocity-1.7/lib/log4j-1.2.12.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/velocity-1.7/lib/maven-ant-tasks-2.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/velocity-1.7/lib/oro-2.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/velocity-1.7/lib/servletapi-2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/velocity-1.7/lib/werken-xpath-0.9.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/velocity-1.7/velocity-1.7-dep.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/velocity-1.7/velocity-1.7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/lib/velocity-1.7/docs/api" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/lib/velocity-1.7/src/java" />
+      <root url="file://$PROJECT_DIR$/lib/velocity-1.7/src/test" />
+      <root url="file://$PROJECT_DIR$/lib/velocity-1.7/test/classloader" />
+      <root url="file://$PROJECT_DIR$/lib/velocity-1.7/examples/app_example1" />
+      <root url="file://$PROJECT_DIR$/lib/velocity-1.7/examples/app_example2" />
+      <root url="file://$PROJECT_DIR$/lib/velocity-1.7/examples/event_example" />
+      <root url="file://$PROJECT_DIR$/lib/velocity-1.7/examples/logger_example" />
+      <root url="file://$PROJECT_DIR$/lib/velocity-1.7/examples/xmlapp_example" />
+      <root url="file://$PROJECT_DIR$/lib/velocity-1.7/examples/context_example" />
+    </SOURCES>
+  </library>
+</component>

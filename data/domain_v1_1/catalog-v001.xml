@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1372054700964" name="file:///WCMS%20Domain%20Ontology/Ontology%20Imports/FOAF.rdf" uri="FOAF.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1372054700964" name="http://vocab.sindice.net/" uri="Schema%20OWL.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1372054700964" name="http://www.abc.net.au/ontologies/merged-use-cases" uri="UseCaseTests_merged.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1372054700964" name="http://www.ebu.ch/metadata/ontologies/ebuccdm" uri="CCDM.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1372054700964" name="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-8" uri="UseCaseTests_Radio.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1372054700964" name="http://www.w3.org/2004/02/skos/core" uri="skos.rdf"/>
+    </group>
+</catalog>

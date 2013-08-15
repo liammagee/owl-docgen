@@ -1,0 +1,378 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY WcmsDomainModel "http://abc.net.au/ontologies/2013/WcmsDomainModel#" >
+    <!ENTITY ABCProgramReferenceModel "http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-8#"
+     xml:base="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-8"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ABCProgramReferenceModel="http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#"
+     xmlns:WcmsDomainModel="http://abc.net.au/ontologies/2013/WcmsDomainModel#">
+    <owl:Ontology rdf:about="file:/Users/liam/Dropbox/Work/abc/2013%20ABC%20Domain%20Modelling/code/data/domain/UseCaseTests_Radio.owl">
+        <owl:imports rdf:resource="http://www.semanticweb.org/liam/ontologies/2013/5/WcmsDomainModel.rdf"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#Service -->
+
+    <owl:Class rdf:about="&ABCProgramReferenceModel;Service"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P$&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P$&apos;">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;ProgramGroup"/>
+        <rdfs:label>P4: Background Briefing</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P1&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P1&apos;">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;ProgramGroup"/>
+        <rdfs:label>P1: Life Matters</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P2&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P2&apos;">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;ProgramGroup"/>
+        <rdfs:label>P2: Sunday Extra</rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P3&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#&apos;P3&apos;">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;ProgramGroup"/>
+        <rdfs:label>P3: Sydney Writers Festival </rdfs:label>
+        <ABCProgramReferenceModel:hasEpisode rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS1">
+        <rdf:type rdf:resource="http://schema.org/Article"/>
+        <rdfs:label>AS1: CMS article for Body Sphere episode PE1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS2">
+        <rdf:type rdf:resource="http://schema.org/Article"/>
+        <rdfs:label>AS2: CMS article for Life Matters segment on life after redundancy from PE2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS3">
+        <rdf:type rdf:resource="http://schema.org/Article"/>
+        <rdfs:label>AS3: CMS article for Life Matters segment on faith and doubt from PE2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE1">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;BroadcastEvent"/>
+        <rdfs:label>BI1: Sunday Extra (PE3) on Radio National at 07:30, 2/9/12</rdfs:label>
+        <WcmsDomainModel:publishes rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE2">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;BroadcastEvent"/>
+        <rdfs:label>BI2: Background Briefing (PE4) on Radio National at 08:00, 2/9/12 (part of BI1)</rdfs:label>
+        <WcmsDomainModel:publishes rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE3">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;BroadcastEvent"/>
+        <rdfs:label>BI3: Background Briefing (PE4) on Radio Australia at 14:00, 3/9/12</rdfs:label>
+        <WcmsDomainModel:publishes rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI1">
+        <rdf:type rdf:resource="http://schema.org/AudioObject"/>
+        <rdfs:label>MI1: Audio File instantiation of BI1</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI2">
+        <rdf:type rdf:resource="http://schema.org/AudioObject"/>
+        <rdfs:label>MI2: Audio File instantiation  of BI2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI3">
+        <rdf:type rdf:resource="http://schema.org/AudioObject"/>
+        <rdfs:label>MI3: Audio File instantiation of BI3</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N1">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Service"/>
+        <rdfs:label>N1: Radio National</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N2">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Service"/>
+        <rdfs:label>N2: New England North West</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N3">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Service"/>
+        <rdfs:label>N3: Digital Extra</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE1">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>PE1: Body Sphere on Tango Nuevo</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE2">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>PE2: Life Matters produced on Monday 3/9/12</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS2"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#AS3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE3">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>PE3: Sunday Extra produced for 2/9/12</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES1:_Sunday_Extra_produce_for_2/9/12:_Whole_Episode"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES2:_Sunday_Extra_produced_for_2/9/12:_Background_Briefing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PE4">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Episode"/>
+        <rdfs:label>PE4: Background Briefing on rape in Democratic Republic of Congo</rdfs:label>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES1:_Sunday_Extra_produce_for_2/9/12:_Whole_Episode -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES1:_Sunday_Extra_produce_for_2/9/12:_Whole_Episode">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>PES1: Sunday Extra produced for 2/9/12: Whole Episode</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI1"/>
+        <ABCProgramReferenceModel:hasSegment rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES2:_Sunday_Extra_produced_for_2/9/12:_Background_Briefing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES2:_Sunday_Extra_produced_for_2/9/12:_Background_Briefing -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES2:_Sunday_Extra_produced_for_2/9/12:_Background_Briefing">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>PES2: Sunday Extra produced for 2/9/12: Background Briefing</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#PES3">
+        <rdf:type rdf:resource="&ABCProgramReferenceModel;Segment"/>
+        <rdfs:label>PES3: Background Briefing on rape in Democratic Republic of Congo: Whole Episode</rdfs:label>
+        <WcmsDomainModel:segmentHasAssociatedMedia rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#MI3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#S1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#S1">
+        <rdf:type rdf:resource="&WcmsDomainModel;Schedule"/>
+        <rdfs:label>S1: Radio National, WA</rdfs:label>
+        <WcmsDomainModel:scheduleHasService rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N1"/>
+        <WcmsDomainModel:scheduleHasScheduleEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#S2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#S2">
+        <rdf:type rdf:resource="&WcmsDomainModel;Schedule"/>
+        <rdfs:label>S2: Radio National, NSW/VIC/TAS</rdfs:label>
+        <WcmsDomainModel:scheduleHasService rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N1"/>
+        <WcmsDomainModel:scheduleHasScheduleEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE2"/>
+        <WcmsDomainModel:scheduleHasScheduleEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE3"/>
+        <WcmsDomainModel:scheduleHasScheduleEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE4"/>
+        <WcmsDomainModel:scheduleHasScheduleEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#S3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#S3">
+        <rdf:type rdf:resource="&WcmsDomainModel;Schedule"/>
+        <rdfs:label rdf:datatype="&xsd;string">SE: Digital Extra</rdfs:label>
+        <WcmsDomainModel:scheduleHasService rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#N3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE1">
+        <rdf:type rdf:resource="&WcmsDomainModel;ScheduleEvent"/>
+        <rdfs:label>SE1: RN Drive, Mondays 16:00-18:00, all platforms, Radio National WA (S1)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE2">
+        <rdf:type rdf:resource="&WcmsDomainModel;ScheduleEvent"/>
+        <rdfs:label>SE2: RN Drive, Mondays 18:00-20:00, all platforms, Radio National NSW/VIC/TAS (S2)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE3">
+        <rdf:type rdf:resource="&WcmsDomainModel;ScheduleEvent"/>
+        <rdfs:label>SE3: RN Drive, Tuesdays 18:00-20:00, all platforms, Radio National NSW/VIC/TAS (S2)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE4">
+        <rdf:type rdf:resource="&WcmsDomainModel;ScheduleEvent"/>
+        <rdfs:label>SE4: Sunday Extra, Sundays 7:30-10:00, all platforms, Radio National NSW/VIC/TAS (S2)</rdfs:label>
+        <WcmsDomainModel:hasAssociatedBroadcastEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#SE5">
+        <rdf:type rdf:resource="&WcmsDomainModel;ScheduleEvent"/>
+        <rdfs:label>SE5: Background Briefing, Tuesdays 14:00-14:45, all platforms, Radio National NSW/VIC/TAS (S2)</rdfs:label>
+        <WcmsDomainModel:hasAssociatedBroadcastEvent rdf:resource="http://www.abc.net.au/ontologies/ABCProgramReferenceModel/RPMC_Example.owl#BE3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#Friday">
+        <rdfs:label>Friday</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

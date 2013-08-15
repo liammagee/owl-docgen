@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/#"
+    xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:j.0="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:po="http://purl.org/ontology/po/"
+    xmlns="http://www.abc.net.au/ontologies/ABCProgramReferenceModel.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <owl:Ontology rdf:about="">
+    <rdfs:comment>The ABC Program Reference Model is an information model that describes programs, program groups and parts of programs and their relationships as part of the ABC’s broadcast and publishing activities. It is valid for all program content broadcast on ABC radio and television that has an associated web presence. </rdfs:comment>
+    <owl:versionInfo>Version 1.  November 2010.</owl:versionInfo>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+  <owl:Class rdf:ID="DerivationReasonType">
+    <j.0:term_status>Stable</j.0:term_status>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Anchor point for TV-Anytime defined Derivation Reason classification scheme.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Derivation Reason Type</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="hasGroup">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isGroupOf"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart"/>
+    </rdfs:subPropertyOf>
+    <j.0:term_status>Stable</j.0:term_status>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Associates a Program Group with a Program Group.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has program group</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="segmentGroupHasPart">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart"/>
+    </rdfs:subPropertyOf>
+    <j.0:term_status>Stable</j.0:term_status>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Associates a Segment Group with its Segment.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >segment group has part</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasSegment">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isSegmentOf"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart"/>
+    </rdfs:subPropertyOf>
+    <j.0:term_status>Stable</j.0:term_status>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Associates an Episode with a Segment.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has segment</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isSegmentOf">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
+    </rdfs:subPropertyOf>
+    <j.0:term_status>Stable</j.0:term_status>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Associates a Segment with an Episode.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >is segment of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="segmentGroupIsPartOf">
+    <owl:inverseOf rdf:resource="#segmentGroupHasPart"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
+    </rdfs:subPropertyOf>
+    <j.0:term_status>Stable</j.0:term_status>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Associates a Segment with a Segment Group.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >is part of segment group</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasVersion">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A related resource that is a version, edition, or adaptation of the described resource [DCMI Terms].</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has version</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isVersionOf">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A related resource of which the described resource is a version, edition, or adaptation [DCMI Terms].</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >is version of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#isGroupOf">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
+    </rdfs:subPropertyOf>
+    <j.0:term_status>Stable</j.0:term_status>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Associates a Program Group with another Program Group.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >is program group of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/isPartOf">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A related resource in which the described resource is physically or logically included [DCMI Terms].</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >is part of</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A related resource that is included either physically or logically in the described resource [DCMI Terms].</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has part</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:TransitiveProperty rdf:ID="hasParentGroup">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:comment>Associates a Program Group with its parent.</rdfs:comment>
+    <j.0:term_status>Stable</j.0:term_status>
+    <rdfs:label>has parent group</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:TransitiveProperty rdf:ID="hasParentEpisode">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:comment>Associates an Episode with its parent.</rdfs:comment>
+    <j.0:term_status>Stable</j.0:term_status>
+    <rdfs:label>has parent episode</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->
