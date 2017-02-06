@@ -1,3 +1,3 @@
 <#assign nestedMessage = "I'm here, mon!">
-${.main.bar}
+${.generateDocs.bar}
 <#-- ${.root.message} -->

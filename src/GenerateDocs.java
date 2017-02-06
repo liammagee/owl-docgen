@@ -1,4 +1,5 @@
 import aterm.ATermAppl;
+
 import com.clarkparsia.pellet.owlapiv3.PelletReasoner;
 import com.clarkparsia.pellet.owlapiv3.PelletReasonerFactory;
 import org.apache.velocity.Template;
@@ -7,15 +8,12 @@ import org.apache.velocity.app.Velocity;
 import org.apache.velocity.exception.ParseErrorException;
 import org.apache.velocity.exception.ResourceNotFoundException;
 import org.mindswap.pellet.taxonomy.Taxonomy;
-import org.mindswap.pellet.taxonomy.TaxonomyNode;
-import org.mindswap.pellet.utils.Comparators;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.metrics.NumberOfClassesWithMultipleInheritance;
 import org.semanticweb.owlapi.metrics.OWLMetric;
 import org.semanticweb.owlapi.metrics.OWLMetricManager;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.reasoner.Node;
-import org.semanticweb.owlapi.reasoner.NodeSet;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
@@ -31,7 +29,7 @@ import java.util.*;
  * Time: 11:24 AM
  * To change this template use File | Settings | File Templates.
  */
-public class Main {
+public class GenerateDocs {
 
     protected static PrintWriter out;
     protected static Taxonomy<ATermAppl> taxonomy;
@@ -43,18 +41,7 @@ public class Main {
 
     public static void main(String[]args){
         try {
-//            OWLOntologyManager manager = getUseCaseOntologyManager();
-//            mergeOntologies(manager);
-//            compareMetrics();
             generateDocs();
-
-//            String cmd = args[0];
-//            if (cmd.equals("mergeUseCases")) {
-//                mergeOntologies();
-//            }
-//            else {
-//                compareMetrics();
-//            }
         } catch (Exception e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
@@ -67,7 +54,8 @@ public class Main {
     public static void generateDocs() {
         try {
             OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-            OWLOntology domainOntology = getOSISAOntology(manager);
+            OWLOntology domainOntology = OntologyRefs.getOSISAOntologyExtended(manager);
+            //OWLOntology domainOntology = OntologyRefs.getOSISAOntology(manager);
 
             PelletReasoner reasoner = PelletReasonerFactory.getInstance().createReasoner(domainOntology);
             reasoner.getKB().realize();
@@ -81,8 +69,8 @@ public class Main {
     public static void printNodes(Node<OWLClass> node, OWLOntology ontology, OWLOntologyManager manager, OWLReasoner reasoner) {
         Set<OWLClass> entities = node.getEntities();
 
-        Main main = new Main();
-        main.generateHtml(entities, ontology, manager, reasoner);
+        GenerateDocs generateDocs = new GenerateDocs();
+        generateDocs.generateHtml(entities, ontology, manager, reasoner);
         for (Iterator<OWLClass> iterator = entities.iterator(); iterator.hasNext(); ) {
             OWLClass next = iterator.next();
             printOwlClass(next, ontology, manager, reasoner, 0);
@@ -231,7 +219,21 @@ public class Main {
             context.put("roots", rootClasses);
             context.put("manager", manager);
             context.put("reasoner", reasoner);
-            context.put("namespace", ontology.getOntologyID().getOntologyIRI().toString() + "#");
+            context.put("ontology", ontology);
+            /*
+            OWLNamedIndividual i;
+            Set<OWLAnnotation> as = i.getAnnotations(ontology);
+            Iterator<OWLAnnotation> ioa = as.iterator();
+            while (ioa.hasNext()) {
+                OWLAnnotation oa = ioa.next();
+                OWLAnnotationValue = oa.getValue();
+            }
+            Map<OWLDataPropertyExpression, Set<OWLLiteral>> props = i.getDataPropertyValues(ontology);
+            OWLDataPropertyExpression e;
+            */
+
+            if (ontology.getOntologyID() != null && ontology.getOntologyID().getOntologyIRI() != null)
+                context.put("namespace", ontology.getOntologyID().getOntologyIRI().toString() + "#");
             context.put("dataProperties", dataProperties);
             context.put("objectProperties", objectProperties);
             context.put("trimmer", this);
@@ -266,100 +268,7 @@ public class Main {
         OWLReasonerFactory reasonerFactory = new StructuralReasonerFactory();
     }
 
-    public static void compareMetrics() {
-        try {
-            OWLOntologyManager manager = getModelOntologyManager();
-            List<OWLMetric<?>> metrics = new ArrayList<OWLMetric<?>>();
-            NumberOfClassesWithMultipleInheritance m1 = new NumberOfClassesWithMultipleInheritance(manager);
-            m1.setImportsClosureUsed(true);
-            metrics.add(m1);
-            OWLMetricManager metricManager = new OWLMetricManager(metrics);
-            metricManager.setOntology(manager.getOntology(IRI.create("file:/Users/liam/Dropbox/work/abc/2013%20ABC%20Domain%20Modelling/code/data/domain/WcmsDomainModel.rdf")));
-            System.out.println("metricManager = " + metricManager.toString());
-        } catch (OWLOntologyCreationException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-    }
-
-    public void getRelevantMetrics() {
-
-    }
 
 
-    public static void mergeOntologies(OWLOntologyManager manager) {
-        try {
-            OWLOntologyMerger merger = new OWLOntologyMerger(manager);
-            IRI mergedIRI = IRI.create("http://www.abc.net.au/ontologies/merged-use-cases");
-            OWLOntology merged = merger.createMergedOntology(manager, mergedIRI);
-            File mergedFile = new File("data/domain/UseCaseTests_merged.owl");
-            manager.saveOntology(merged, new FileOutputStream(mergedFile));
-        } catch (OWLOntologyCreationException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (OWLOntologyStorageException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-    }
-
-    private static OWLOntologyManager getUseCaseOntologyManager() throws OWLOntologyCreationException {
-        OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-        OWLOntology tvUseCasesOntology = getTVOntology(manager);
-        OWLOntology radioUseCasesOntology = getRadioOntology(manager);
-        return manager;
-    }
-
-
-    private static OWLOntologyManager getModelOntologyManager() throws OWLOntologyCreationException {
-        OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
-        OWLOntology domainOntology = getDomainOntology(manager);
-        OWLOntology documentOntology = getDocumentOntology(manager);
-        return manager;
-    }
-
-
-
-    private static OWLOntology getOSISAOntology(OWLOntologyManager manager) {
-        return getLocalOntology(manager, "data/OSIS-DesignA.owl");
-    }
-
-    private static OWLOntology getOSISBOntology(OWLOntologyManager manager) {
-        return getLocalOntology(manager, "data/OSIS-DesignB.owl");
-    }
-
-    private static OWLOntology getDocumentOntology(OWLOntologyManager manager) {
-        return getLocalOntology(manager, "data/document/WcmsDocumentModel.rdf");
-    }
-
-    private static OWLOntology getDomainOntology(OWLOntologyManager manager) {
-        return getLocalOntology(manager, getDomainPath() + "WcmsDomainModel.rdf");
-    }
-
-    private static OWLOntology getTVOntology(OWLOntologyManager manager) {
-        return getLocalOntology(manager, getDomainPath() + "UseCaseTests_TV.owl");
-    }
-
-    private static OWLOntology getRadioOntology(OWLOntologyManager manager) {
-        return getLocalOntology(manager, getDomainPath() + "UseCaseTests_Radio.owl");
-    }
-
-    private static OWLOntology getMergedOntology(OWLOntologyManager manager) {
-        return getLocalOntology(manager, getDomainPath() + "UseCaseTests_merged.owl");
-    }
-
-
-    private static String getDomainPath() {
-        return CURRENT_VERSION_PATH;
-    }
-
-    private static OWLOntology getLocalOntology(OWLOntologyManager manager, String file) {
-        try {
-            File ontologyFile = new File(file);
-            return manager.loadOntologyFromOntologyDocument(ontologyFile);
-        } catch (OWLOntologyCreationException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            return null;
-        }
-    }
 
 }

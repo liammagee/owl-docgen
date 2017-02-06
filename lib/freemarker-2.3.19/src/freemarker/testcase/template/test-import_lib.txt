@@ -1,8 +1,8 @@
 <#macro test foo>
   Test ${foo}.
   Email: ${mail}
-  <#if .main.mail?exists>
-    Email in the root: ${.main.mail}
+  <#if .generateDocs.mail?exists>
+    Email in the root: ${.generateDocs.mail}
   </#if>
 </#macro>
 

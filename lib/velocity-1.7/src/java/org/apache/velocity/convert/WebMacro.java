@@ -285,7 +285,7 @@ public class WebMacro
     }
 
     /**
-     * Main hook for the conversion process.
+     * GenerateDocs hook for the conversion process.
      * @param args
      */
     public static void main(String[] args)

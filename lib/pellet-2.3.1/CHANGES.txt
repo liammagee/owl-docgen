@@ -523,7 +523,7 @@ Pellet 2.0-rc1 (Oct 27, 2008)
      
 * ENHANCED: Reasoning performance
 
-     Consistency checking, the main reasoning service used by all the
+     Consistency checking, the generateDocs reasoning service used by all the
      other reasoning services, has been improved to be more efficient.
      The improvements are especially significant for ontologies with
      a large number of instances. For example, consistency checking 

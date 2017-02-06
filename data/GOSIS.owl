@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2012/08/OSIS-DesignA"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/2012/08/OSIS-DesignA">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="osis" IRI="http://www.cs.rmit.edu.au/knowledgebase/ontology/OSIS/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.org/dc/terms/</Import>
+    <Import>http://purl.org/dc/elements/1.1/</Import>
+    <Import>http://purl.org/dc/dcmitype/</Import>
+    <Declaration>
+        <Class IRI="#AAA"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IndicatorSet"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Issue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:Text"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:date"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:description"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:format"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:isReferenceBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:publisher"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:title"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="osis:belognsToIndicatorSet"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="osis:hasCategory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="osis:hasIssue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="osis:hasReference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="osis:hasUnitOfMeasurement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="osis:instanceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="osis:isMeasuredByIndicator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EC1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GRI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OECD"/>
+    </Declaration>
+    <ClassAssertion>
+        <Class IRI="#Indicator"/>
+        <NamedIndividual IRI="#EC1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IndicatorSet"/>
+        <NamedIndividual IRI="#GRI"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IndicatorSet"/>
+        <NamedIndividual IRI="#OECD"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#GRI"/>
+        <NamedIndividual IRI="#OECD"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#OECD"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="osis:belognsToIndicatorSet"/>
+        <NamedIndividual IRI="#EC1"/>
+        <NamedIndividual IRI="#GRI"/>
+    </ObjectPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="osis:belognsToIndicatorSet"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="osis:belognsToIndicatorSet"/>
+        <Class IRI="#IndicatorSet"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IndicatorSet</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Defines as one of two individuals</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
+

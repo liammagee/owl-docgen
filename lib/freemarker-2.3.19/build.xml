@@ -763,7 +763,7 @@ Version: $Id: build.xml,v 1.138.2.4 2006/12/27 16:11:23 szegedia Exp $
                 <include name="NOTICE.txt" />
             </metainf>
             <manifest>
-                <attribute name="Main-Class" value="freemarker.core.CommandLine" />
+                <attribute name="GenerateDocs-Class" value="freemarker.core.CommandLine" />
                 <attribute name="Extension-name" value="FreeMarker" />
                 <attribute name="Specification-Title" value="FreeMarker" />
                 <attribute name="Specification-Version" value="${versionForMf}" />

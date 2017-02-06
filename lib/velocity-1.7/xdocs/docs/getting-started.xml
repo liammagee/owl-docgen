@@ -67,7 +67,7 @@ Application Guide is highly recommended!</i>
         You can download the latest release version of
         <a href="http://velocity.apache.org/download.cgi#engine">Velocity</a>
         or <a href="http://velocity.apache.org/download.cgi#tools">Velocity Tools</a>
-        from the main Apache Velocity download site.  For Velocity itself, source is included with the binary download.
+        from the generateDocs Apache Velocity download site.  For Velocity itself, source is included with the binary download.
     </p>
 
     <p>

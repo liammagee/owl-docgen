@@ -9,7 +9,7 @@
 ${.lang} == en
 ${.locale} == en_US
 <#assign works = .locals!>
-<#assign works = .main>
+<#assign works = .generateDocs>
 <#assign works = .node!>
 ${.output_encoding?lower_case} == utf-8
 ${.template_name} == test-specialvars.txt

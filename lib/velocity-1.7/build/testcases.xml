@@ -20,10 +20,10 @@
 -->
 
 <!-- Legacy Testcases for Velocity. See notes at the top
-     of the main build file
+     of the generateDocs build file
 -->
 
-<project name="main" default="test-all" basedir="..">
+<project name="generateDocs" default="test-all" basedir="..">
   <property file="${user.home}/.ant.properties" />
   <property file="${user.home}/build.properties" />
   <property file=".ant.properties" />

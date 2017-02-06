@@ -192,8 +192,31 @@ children: [
             #if ($instances.size() > 0)
                 #foreach ($instance in $reasoner.getInstances($owlClass, true).getFlattened())
                     <div>
-                        $instance.getIRI().getFragment()
+                        $instance.asOWLNamedIndividual().getIRI().getFragment()
                     </div>
+                    #set ($dataValues = $instance.getDataPropertyValues($ontology))
+                    #foreach ($key in $dataValues.keySet())
+                        <div>
+                            $key.toString()
+                        </div>
+                    #end
+                    #set ($annotations = $instance.getAnnotations($ontology))
+                    <table>
+                        <tr>
+                            <th class="name">Annotation</th>
+                            <th class="type">Value(s)</th>
+                        </tr>
+                        #foreach ($annotation in $annotations)
+                            <tr>
+                                <td>$annotation.getProperty().getIRI().getFragment()</td>
+                                <td>
+                                ## Can't do casting here to OWLLiteral, so need to hope this always works
+                                ##$annotation.getValue().getLiteral()
+                                $annotation.getValue()
+                                </td>
+                            </tr>
+                        #end
+                    </table>
                 #end
             #else
                 <em>This class has no instances.</em>

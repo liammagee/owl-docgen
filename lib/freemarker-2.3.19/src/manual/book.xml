@@ -1367,7 +1367,7 @@ The average of the price of a python and an elephant is:
             <itemizedlist>
               <listitem>
                 <para>... the output (the return value) is markup (HTML, XML,
-                etc.). The main reason is that the result of functions are
+                etc.). The generateDocs reason is that the result of functions are
                 subject to automatic XML-escaping (due to the nature of
                 <literal>${<replaceable>...</replaceable>}</literal>), while
                 the output of user-defined directives are not (due to the
@@ -1420,7 +1420,7 @@ The average of the price of a python and an elephant is:
             users</emphasis>: A node is similar to a sequence that stores
             other nodes, which are often referred as the children nodes. A
             node stores a reference to its container node, which is often
-            referred as the parent node. The main point of being a node is the
+            referred as the parent node. The generateDocs point of being a node is the
             topological information; other data must be stored by utilizing
             that a value can have multiple types. Like, a value may be both a
             node and a number, in which case it can store a number as the
@@ -1833,7 +1833,7 @@ The average of the price of a python and an elephant is:
 
                 <listitem>
                   <para><link linkend="dgui_template_exp_var_special">Special
-                  variable</link>: <literal>.main</literal></para>
+                  variable</link>: <literal>.generateDocs</literal></para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -4464,7 +4464,7 @@ ${.globals.user} &lt;#-- prints: Big Joe --&gt;</programlisting>
         linkend="dgui_misc_var">previous chapter</link>. A set of variables
         like this is called a <emphasis role="term">namespace</emphasis>. In
         simple cases you use only one namespace, the so-called <emphasis
-        role="term">main namespace</emphasis>. You don't realize this, since
+        role="term">generateDocs namespace</emphasis>. You don't realize this, since
         normally you use only this namespace.</para>
 
         <para>But if you want to build reusable collection of macros,
@@ -4498,7 +4498,7 @@ ${.globals.user} &lt;#-- prints: Big Joe --&gt;</programlisting>
           use this in <literal>aWebPage.ftl</literal>. If you use
           <literal>&lt;#include "/lib/my_test.ftl"&gt;</literal> in the
           <literal>aWebPage.ftl</literal>, then it will create the two
-          variables in the main namespace, and it is not good now, since you
+          variables in the generateDocs namespace, and it is not good now, since you
           want them to be in a namespace that is used exclusively by the ``My
           Test Library''. Instead of <literal>include</literal> you have to
           use <link linkend="ref.directive.import"><literal>import</literal>
@@ -4510,11 +4510,11 @@ ${.globals.user} &lt;#-- prints: Big Joe --&gt;</programlisting>
           they are visible from everywhere), and will create the two variables
           in this new world. That's fine for now, but you want to access the
           two variables from <literal>aWebPage.ftl</literal>, and that uses
-          the main namespace, so it can't see the variables of the other
+          the generateDocs namespace, so it can't see the variables of the other
           namespace. The solution is that the <literal>import</literal>
           directive not only creates the new namespace, but a new hash
           variable in the namespace used by the caller of
-          <literal>import</literal> (the main namespace in this case), that
+          <literal>import</literal> (the generateDocs namespace in this case), that
           will act as a gate into the newly created namespace. So this is how
           <literal>aWebPage.ftl</literal> will look like:</para>
 
@@ -4531,7 +4531,7 @@ ${<emphasis>my</emphasis>.mail}</programlisting>
 jsmith@acme.com</programlisting>
 
           <para>If you would have a variable called <literal>mail</literal> or
-          <literal>copyright</literal> in the main namespace, that would not
+          <literal>copyright</literal> in the generateDocs namespace, that would not
           cause any confusion, since the two templates use separated
           namespaces. For example, modify the <literal>copyright</literal>
           macro in <literal>lib/my_test.ftl</literal> to this:</para>
@@ -4564,7 +4564,7 @@ fred@acme.com</programlisting>
           <literal>/lib/my_test.ftl</literal>. Thus, the
           <literal>copyright</literal> macro always sees the
           <literal>mail</literal> variable that exists there, and not the
-          other <literal>mail</literal> that exists in the main
+          other <literal>mail</literal> that exists in the generateDocs
           namespace.</para>
         </section>
 
@@ -4664,7 +4664,7 @@ jsmith@other.com, jsmith@other.com, jsmith@other.com</programlisting>
           <literal>import</literal> namespace N2 while you are in name space
           N1, N2 will not be inside N1. N1 just gets a hash by which it can
           access N2. This is the same N2 namespace that you would access if,
-          say, you <literal>import</literal> N2 when you are in the main
+          say, you <literal>import</literal> N2 when you are in the generateDocs
           namespace.</para>
 
           <para>Each <link linkend="gloss.templateProcessingJob">template
@@ -5315,7 +5315,7 @@ import java.io.*;
 
 public class Test {
 
-    public static void main(String[] args) throws Exception {
+    public static void generateDocs(String[] args) throws Exception {
         
         /* ------------------------------------------------------------------- */    
         /* You should do this ONLY ONCE in the whole application life-cycle:   */    
@@ -10149,13 +10149,13 @@ Test Book</programlisting>
 
           <para>The <literal>ns_prefixes</literal> parameter affects the whole
           <link linkend="dgui_misc_namespace">FTL namespace</link>. This means
-          in practice that the prefixes you have registered in the main page
+          in practice that the prefixes you have registered in the generateDocs page
           template will be visible in all <literal>&lt;#include
           ...&gt;</literal>-d templates, but not in <literal>&lt;#imported
           ...&gt;</literal>-d templates (often referred as FTL libraries). Or
           from another point of view, an FTL library can register XML
           namespace prefixes for it's own use, without interfering with the
-          prefix registrations of the main template and other
+          prefix registrations of the generateDocs template and other
           libraries.</para>
 
           <para>Note that, if an input document is dominated by a given XML
@@ -17101,7 +17101,7 @@ or
               an FTL namespace is created for the template that contains it,
               otherwise the <literal>ns_prefixes</literal> parameter has no
               effect. An FTL namespace is made for a template when: (a) the
-              template is the ``main'' template, that is, it is not invoked as
+              template is the ``generateDocs'' template, that is, it is not invoked as
               a result of an <literal>&lt;#include ...&gt;</literal>, but it
               is directly invoked (<phrase role="forProgrammers">with the
               <literal>process</literal> Java method of class
@@ -17846,8 +17846,8 @@ There was no specific handler for node y
         </listitem>
 
         <listitem>
-          <para><literal>main</literal>: A hash that you can use to access the
-          main <link linkend="dgui_misc_namespace">namespace</link>. Note that
+          <para><literal>generateDocs</literal>: A hash that you can use to access the
+          generateDocs <link linkend="dgui_misc_namespace">namespace</link>. Note that
           global variables like the variables of data-model are
           <emphasis>not</emphasis> visible through this hash.</para>
         </listitem>
@@ -22268,7 +22268,7 @@ TemplateModel x = env.getVariable("x");  // get variable x</programlisting>
                 </listitem>
               </itemizedlist>
 
-              <para>The main reason of the splitting of
+              <para>The generateDocs reason of the splitting of
               <literal>freemarker.template</literal> package was that the
               amount of "expert" public classes and interfaces grows too much,
               as we introduce API-s for third-party tools, such as debugging
@@ -22698,7 +22698,7 @@ TemplateModel x = env.getVariable("x");  // get variable x</programlisting>
             <listitem>
               <para>New package: <literal>freemarker.core</literal>. Classes
               used by mostly power-users was moved here from the
-              <literal>freemarker.template</literal> package. The main reason
+              <literal>freemarker.template</literal> package. The generateDocs reason
               of the splitting of <literal>freemarker.template</literal>
               package was that the amount of "expert" public classes and
               interfaces grows too much, as we introduce API-s for third-party
@@ -25860,7 +25860,7 @@ TemplateModel x = env.getVariable("x");  // get variable x</programlisting>
       <section xml:id="versions_2_01">
         <title>2.01</title>
 
-        <para>The main improvement is in error reporting. Now exceptions are
+        <para>The generateDocs improvement is in error reporting. Now exceptions are
         much more informative since they come with complete line number and
         column information.</para>
 

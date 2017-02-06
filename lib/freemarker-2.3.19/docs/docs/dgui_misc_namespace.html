@@ -74,7 +74,7 @@
         variables that you have created with <tt style="color: #A03D10">assign</tt> and
         <tt style="color: #A03D10">macro</tt> directives, as can be seen from the <a href="dgui_misc_var.html">previous chapter</a>. A set of variables
         like this is called a <b>namespace</b>. In
-        simple cases you use only one namespace, the so-called <b>main namespace</b>. You don't realize this, since
+        simple cases you use only one namespace, the so-called <b>generateDocs namespace</b>. You don't realize this, since
         normally you use only this namespace.</p><p>But if you want to build reusable collection of macros,
         functions and other variables -- usually referred as <b>library</b> by lingo -- the usage of multiple
         namespaces becomes inevitable. Just consider if you have a big
@@ -113,7 +113,7 @@
           use this in <tt style="color: #A03D10">aWebPage.ftl</tt>. If you use
           <tt style="color: #A03D10">&lt;#include &quot;/lib/my_test.ftl&quot;&gt;</tt> in the
           <tt style="color: #A03D10">aWebPage.ftl</tt>, then it will create the two
-          variables in the main namespace, and it is not good now, since you
+          variables in the generateDocs namespace, and it is not good now, since you
           want them to be in a namespace that is used exclusively by the ``My
           Test Library''. Instead of <tt style="color: #A03D10">include</tt> you have to
           use <a href="ref_directive_import.html#ref.directive.import"><tt>import</tt>
@@ -125,11 +125,11 @@
           they are visible from everywhere), and will create the two variables
           in this new world. That's fine for now, but you want to access the
           two variables from <tt style="color: #A03D10">aWebPage.ftl</tt>, and that uses
-          the main namespace, so it can't see the variables of the other
+          the generateDocs namespace, so it can't see the variables of the other
           namespace. The solution is that the <tt style="color: #A03D10">import</tt>
           directive not only creates the new namespace, but a new hash
           variable in the namespace used by the caller of
-          <tt style="color: #A03D10">import</tt> (the main namespace in this case), that
+          <tt style="color: #A03D10">import</tt> (the generateDocs namespace in this case), that
           will act as a gate into the newly created namespace. So this is how
           <tt style="color: #A03D10">aWebPage.ftl</tt> will look like:</p>
 
@@ -152,7 +152,7 @@ jsmith@acme.com&nbsp;<span style="font-size: 1pt"> </span></pre></td></tr></tabl
 
 
           <p>If you would have a variable called <tt style="color: #A03D10">mail</tt> or
-          <tt style="color: #A03D10">copyright</tt> in the main namespace, that would not
+          <tt style="color: #A03D10">copyright</tt> in the generateDocs namespace, that would not
           cause any confusion, since the two templates use separated
           namespaces. For example, modify the <tt style="color: #A03D10">copyright</tt>
           macro in <tt style="color: #A03D10">lib/my_test.ftl</tt> to this:</p>
@@ -194,7 +194,7 @@ fred@acme.com&nbsp;<span style="font-size: 1pt"> </span></pre></td></tr></table>
           <tt style="color: #A03D10">/lib/my_test.ftl</tt>. Thus, the
           <tt style="color: #A03D10">copyright</tt> macro always sees the
           <tt style="color: #A03D10">mail</tt> variable that exists there, and not the
-          other <tt style="color: #A03D10">mail</tt> that exists in the main
+          other <tt style="color: #A03D10">mail</tt> that exists in the generateDocs
           namespace.</p>
         
             
@@ -333,7 +333,7 @@ jsmith@other.com, jsmith@other.com, jsmith@other.com&nbsp;<span style="font-size
           <tt style="color: #A03D10">import</tt> namespace N2 while you are in name space
           N1, N2 will not be inside N1. N1 just gets a hash by which it can
           access N2. This is the same N2 namespace that you would access if,
-          say, you <tt style="color: #A03D10">import</tt> N2 when you are in the main
+          say, you <tt style="color: #A03D10">import</tt> N2 when you are in the generateDocs
           namespace.</p>
 
           <p>Each <a href="gloss.html#gloss.templateProcessingJob">template

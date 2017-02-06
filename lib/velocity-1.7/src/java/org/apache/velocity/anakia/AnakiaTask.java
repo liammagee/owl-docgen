@@ -211,7 +211,7 @@ public class AnakiaTask extends MatchingTask
     }
 
     /**
-     * Main body of the application
+     * GenerateDocs body of the application
      * @throws BuildException
      */
     public void execute () throws BuildException

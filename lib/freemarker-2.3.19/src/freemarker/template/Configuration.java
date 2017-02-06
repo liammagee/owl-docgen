@@ -88,7 +88,7 @@ import freemarker.template.utility.StringUtil;
 import freemarker.template.utility.XmlEscape;
 
 /**
- * Main entry point into the FreeMarker API, this class encapsulates the 
+ * GenerateDocs entry point into the FreeMarker API, this class encapsulates the
  * various configuration parameters with which FreeMarker is run, as well
  * as serves as a central template loading and caching point. Note that
  * this class uses a default strategy for loading 

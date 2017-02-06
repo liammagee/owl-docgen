@@ -508,7 +508,7 @@ $person.setAttributes( ["Strange", "Weird", "Excited"] )
     VTL Properties can be used as a shorthand notation for VTL Methods.
     The Property <em>$customer.Address</em> has the exact same effect as
     using the Method <em>$customer.getAddress()</em>. It is generally
-    preferable to use a Property when available. The main difference
+    preferable to use a Property when available. The generateDocs difference
     between Properties and Methods is that you can specify a parameter
     list to a Method.
  </p>

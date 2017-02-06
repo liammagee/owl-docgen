@@ -650,13 +650,13 @@ ${x[&quot;count(//para)&quot;]}&nbsp;<span style="font-size: 1pt"> </span></pre>
 
           <p>The <tt style="color: #A03D10">ns_prefixes</tt> parameter affects the whole
           <a href="dgui_misc_namespace.html">FTL namespace</a>. This means
-          in practice that the prefixes you have registered in the main page
+          in practice that the prefixes you have registered in the generateDocs page
           template will be visible in all <tt style="color: #A03D10">&lt;#include
           ...&gt;</tt>-d templates, but not in <tt style="color: #A03D10">&lt;#imported
           ...&gt;</tt>-d templates (often referred as FTL libraries). Or
           from another point of view, an FTL library can register XML
           namespace prefixes for it's own use, without interfering with the
-          prefix registrations of the main template and other
+          prefix registrations of the generateDocs template and other
           libraries.</p>
 
           <p>Note that, if an input document is dominated by a given XML

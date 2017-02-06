@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="file:///WCMS%20Domain%20Ontology/Ontology%20Imports/FOAF.rdf" uri="domain_v1_1/FOAF.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="http://vocab.sindice.net/" uri="domain_v1_1/Schema%20OWL.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="http://www.abc.net.au/ontologies/merged-use-cases" uri="domain_v1_0/UseCaseTests_merged.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="http://www.ebu.ch/metadata/ontologies/ebuccdm" uri="domain_v1_1/CCDM.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-17" uri="document/UseCasesTest_WcmsDocumentModel.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-8" uri="domain_v1_0/UseCaseTests_Radio.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="http://www.semanticweb.org/ontologies/2012/08/OSIS-DesignA" uri="GOSIS.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="http://www.semanticweb.org/ontologies/2012/8/OSIS-DesignB.owl" uri="SOSIS.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="http://www.w3.org/2004/02/skos/core" uri="domain_v1_0/skos.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="shadowed:http://www.abc.net.au/ontologies/merged-use-cases" uri="domain_v1_1/UseCaseTests_merged.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="shadowed:http://www.semanticweb.org/liam/ontologies/2013/5/untitled-ontology-8" uri="domain_v1_1/UseCaseTests_Radio.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="shadowed:http://www.semanticweb.org/ontologies/2012/08/OSIS-DesignA" uri="tests/OSIS-DesignA.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="shadowed:http://www.semanticweb.org/ontologies/2012/8/OSIS-DesignB.owl" uri="tests/OSIS-DesignB.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1485787736217" name="shadowed:http://www.w3.org/2004/02/skos/core" uri="domain_v1_1/skos.rdf"/>
+    </group>
+</catalog>

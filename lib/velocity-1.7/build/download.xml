@@ -24,7 +24,7 @@
   Its tasks are referenced from the build.xml file and should not be
   called directly.
 
-  This is here so that the main build file is not cluttered any further.
+  This is here so that the generateDocs build file is not cluttered any further.
 -->
 
 <project name="Velocity" basedir="..">

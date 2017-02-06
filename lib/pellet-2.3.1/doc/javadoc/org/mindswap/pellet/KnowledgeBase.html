@@ -1995,7 +1995,7 @@ java.lang.Object
 <TD><CODE><B><A HREF="../../../org/mindswap/pellet/KnowledgeBase.html#setTimeout(long)">setTimeout</A></B>(long&nbsp;timeout)</CODE>
 
 <BR>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set a timeout for the main timer.</TD>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Set a timeout for the generateDocs timer.</TD>
 </TR>
 <TR BGCOLOR="white" CLASS="TableRowColor">
 <TD ALIGN="right" VALIGN="top" WIDTH="1%"><FONT SIZE="-1">
@@ -2059,7 +2059,7 @@ public <A HREF="../../../org/mindswap/pellet/utils/Timers.html" title="class in 
  requirements. However, there are three major timers that are guaranteed
  to exist.
  <ul>
- <li> <b>main</b> - This is the main timer that exists in any Timers
+ <li> <b>generateDocs</b> - This is the generateDocs timer that exists in any Timers
  objects. All the other timers defined in here will have this timer as its
  dependant so setting a timeout on this timer will put a limit on every
  operation done inside KB.</li>
@@ -4684,7 +4684,7 @@ setTimeout</H3>
 <PRE>
 public void <B>setTimeout</B>(long&nbsp;timeout)</PRE>
 <DL>
-<DD>Set a timeout for the main timer. Used to stop an automated test after a
+<DD>Set a timeout for the generateDocs timer. Used to stop an automated test after a
  reasonable amount of time has passed.
 <P>
 <DD><DL>
@@ -5015,6 +5015,6 @@ DETAIL:&nbsp;<A HREF="#field_detail">FIELD</A>&nbsp;|&nbsp;<A HREF="#constructor
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
 
 <HR>
-Copyright © 2004 Evren Sirin. All Rights Reserved.
+Copyright ï¿½ 2004 Evren Sirin. All Rights Reserved.
 </BODY>
 </HTML>

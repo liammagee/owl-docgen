@@ -748,7 +748,7 @@
      property and as it is immutable, you will no longer be able to
      build both jars in one go. Using antcall executes these targets
      as subtasks and this property setting will not propagate back
-     into the main ant build
+     into the generateDocs ant build
 
     -->
     <antcall target="jar" />
@@ -1203,7 +1203,7 @@
 
     * Wait a day or so for the mirrors and maven repos to sync up.
 
-    * Update the main website (velocity-site project) with the release info:
+    * Update the generateDocs website (velocity-site project) with the release info:
 
        * Add this ${version} release to news.xml, download.xml, doap_engine.rdf and
          the "Release status" section of index.xml
@@ -1231,7 +1231,7 @@
   <!-- =================================================================== -->
   <!-- JUnit Tests for Velocity                                            -->
   <!-- =================================================================== -->
-  <target name="test-main" depends="build-prepare,compile-test"
+  <target name="test-generateDocs" depends="build-prepare,compile-test"
           description="Run the Velocity testcases">
 
     <!-- Require ant 1.7+ for Junit compatibility -->
@@ -1290,7 +1290,7 @@
     </junit>
   </target>
   
-  <target name="test" depends="test-main, test-legacy"/>
+  <target name="test" depends="test-generateDocs, test-legacy"/>
   
   <target name="test-legacy" unless="testcase">
     <!-- Run the legacy tests for anakia, texen... -->
