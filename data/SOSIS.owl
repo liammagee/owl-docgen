@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2012/8/OSIS-DesignB.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/2012/8/OSIS-DesignB.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="gri" IRI="https://www.globalreporting.org/"/>
+    <Prefix name="osis" IRI="http://www.cs.rmit.edu.au/knowledgebase/ontology/OSIS/"/>
+    <Prefix name="oecd" IRI="http://www.oecd.org/"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Import>http://purl.org/dc/elements/1.1/</Import>
+    <Import>http://purl.org/dc/terms/</Import>
+    <Import>http://purl.org/dc/dcmitype/</Import>
+    <Declaration>
+        <Class IRI="#Category"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GRI_Aspect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GRI_Description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GRI_Indicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OECD_Description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OECD_Indicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OECD_Theme"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:Title"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="dc:Type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="osis:hasCategory"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="osis:hasReference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="osis:hasUnitofMeasurement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="osis:instanceOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="oecd:hasDefinition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="oecd:hasInformation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="oecd:hasTheme"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gri:hasAspect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gri:hasCompilation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gri:hasDefinition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gri:hasDocumentation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gri:hasRelevance"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#GRI_Aspect"/>
+        <Class IRI="#Category"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GRI_Description"/>
+        <Class IRI="#Description"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GRI_Indicator"/>
+        <Class IRI="#Indicator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OECD_Description"/>
+        <Class IRI="#Description"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OECD_Indicator"/>
+        <Class IRI="#Indicator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OECD_Theme"/>
+        <Class IRI="#Category"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="oecd:hasDefinition"/>
+        <Class IRI="#OECD_Indicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="oecd:hasInformation"/>
+        <Class IRI="#OECD_Indicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="oecd:hasTheme"/>
+        <Class IRI="#OECD_Indicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="gri:hasAspect"/>
+        <Class IRI="#GRI_Indicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="gri:hasCompilation"/>
+        <Class IRI="#GRI_Indicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="gri:hasDefinition"/>
+        <Class IRI="#GRI_Indicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="gri:hasDocumentation"/>
+        <Class IRI="#GRI_Indicator"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="gri:hasRelevance"/>
+        <Class IRI="#GRI_Indicator"/>
+    </ObjectPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
